@@ -6,9 +6,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom grain texture style */
+        .grain-bg {
+            background-color: #0A0470; /* Base color */
+            background-image: 
+                radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 2px 2px, 3px 3px; /* Adjust grain density */
+        }
+    </style>
 </head>
 <body>
-    <div class="main w-full h-full bg-blue-900  text-white px-8">
+    <div class="main w-full h-full grain-bg  text-white px-8">
         <div class="page-1 w-full flex flex-col h-screen">
             <nav class="w-full flex justify-between	h-20 items-center text-lg">
                 <div class="flex">
@@ -20,20 +30,20 @@
                     <button class="w-32 rounded-full px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300	">Register</button>
                 </div>
             </nav>
-            <div class="w-full h-[70%] flex justify-center font-[myfont] items-center text-[80px] flex-col leading-[45px] font-[700] tracking-tight font-sans relative mb-5">
+            <div class="w-full h-[70%] flex justify-center font-[Roboto mono] items-center text-[95px] flex-col leading-[55px] font-[700] tracking-tight font-sans relative mb-5">
                 <h1 class="font-serif text-[30px] pb-10 font-medium tracking-tight">February 20th-22th</h1>
                 <h1>INTERNATIONAL CONFERENCE</h1>
                 <br>
                 <h1 class="">InDACON - 2025</h1>
-                <button class="text-[25px] font-[500] px-8 py-4 rounded-full absolute bottom-[-7%] bg-gradient-to-r from-[#FF84E0] tracking-normal from-60% to-[#FEC35A]  hover:outine">Register For Conference</button>
+                <button class="text-[25px] font-[500] px-8 py-4 rounded-full text-[#0A0470] absolute bottom-[-7%] bg-gradient-to-r from-[#FF84E0] tracking-normal to-[#FEC35A]  hover:outine">Register For Conference</button>
             </div>
         </div>
         <div class="h-screen w-full page-2 flex justify-center items-center text-[50px] px-[130px] font-[myfont] tracking-[-1px] leading-[4rem]">
             <h1>“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & Enviromental conservation "</h1>
         </div>
-        <div class="page-3 w-full h-screen flex gap-12 my-20">
-            <div class="w-1/2 text-[50px] font-semibold">About the <span class="font-[myfont] text-[#FF80ED]">Conference</span></div>
-            <div class="w-1/2 flex flex-col gap-10 text-[19px] pt-6">
+        <div class="page-3 w-full h-screen flex mt-20 gap-12">
+            <div class="w-[45%] text-[60px] font-bold">About the <span class="font-[myfont] text-[#FF80ED]">Conference</span></div>
+            <div class="w-1/2 flex flex-col gap-10 text-[19px] pt-6 leading-9">
                 <h2>This International Conference, organized by the Departments of Chemical and Biochemical Engineering at Harcourt Butler Technical University (HBTU) in collaboration with the Indian Desalination Association (InDA), will focus on trends in desalination, water, energy, and the environment. Key topics include wastewater treatment, water resource management, purification methods, and waste management.</h2>
                 <h2>Experts will share insights on advanced material synthesis and its applications in tackling challenges in desalination, energy, and environmental sustainability. Technical sessions will highlight innovative technologies and strategies to address these pressing global issues effectively.
                 </h2>
@@ -43,7 +53,7 @@
 
         <div class="page-4 w-full h-screen flex flex-col gap-8">
             <div>
-                <h1 class="text-[80px] font-semibold underline decoration-2 underline-offset-[12px]">Speakers</h1>
+                <h1 class="text-[70px] font-semibold underline decoration-2 underline-offset-[12px]">Speakers</h1>
             </div>
 
             <div class="w-full flex flex-wrap justify-center">
@@ -52,7 +62,7 @@
                         <img class="w-[200px] h-[250px] object-cover rounded-2xl" src="./prof img/dalai-profile.jpg" alt="">
                     </div>
                     <div class="w-full flex justify-center flex-col items-center leading-6 text-xl pt-[1px]">
-                        <h1 class="font-medium">Prof. Ajay K. Dalai</h1>
+                        <h1 class="font-medium mb-[8px]">Prof. Ajay K. Dalai</h1>
                         <h1>University of Saskatchewan</h1>
                         <h1>Canada</h1>
                     </div>
@@ -62,7 +72,7 @@
                         <img class="w-[200px] h-[250px] object-cover rounded-2xl" src="./prof img/meda-profile-2022.jpg" alt="">
                     </div>
                     <div class="w-full flex justify-center flex-col items-center leading-6 text-xl pt-[1px]">
-                        <h1 class="font-medium">Prof. Venkatesh Meda</h1>
+                        <h1 class="font-medium mb-[8px]">Prof. Venkatesh Meda</h1>
                         <h1>University of Saskatchewan</h1>
                         <h1>Canada</h1>
                     </div>
@@ -72,7 +82,7 @@
                         <img class="w-[200px] h-[250px] object-cover rounded-2xl" src="./prof img/mehrotra.jpg" alt="">
                     </div>
                     <div class="w-full flex justify-center flex-col items-center leading-6 text-xl pt-[1px]">
-                        <h1 class="font-medium">Prof. Anil Mehrotra</h1>
+                        <h1 class="font-medium mb-[8px]">Prof. Anil Mehrotra</h1>
                         <h1>University of Calgary</h1>
                         <h1>Canada</h1>
                     </div>
@@ -82,7 +92,7 @@
                         <img class="w-[200px] h-[250px] object-cover rounded-2xl" src="./prof img/P23144TA210090_p_6 square.jpg" alt="">
                     </div>
                     <div class="w-full flex justify-center flex-col items-center leading-6 text-xl pt-[1px]">
-                        <h1 class="font-medium">Prof. Amar Mohanty</h1>
+                        <h1 class="font-medium mb-[8px]">Prof. Amar Mohanty</h1>
                         <h1>University of Guelph</h1>
                         <h1>Canada</h1>
                     </div>
@@ -91,8 +101,8 @@
         </div>
 
         <div class="page-5 w-full h-screen flex justify-center items-center">
-            <div class="w-full text-white rounded-lg p-6">
-                <h2 class="text-[40px] font-bold mb-12 text-center">Important Dates</h2>
+            <div class="w-full text-white rounded-lg px-6">
+                <h2 class="text-[60px] font-bold mb-12 text-center">Important Dates</h2>
                 <table class="table-auto w-full border-collapse border border-blue-500 rounded-lg overflow-hidden">
                     <thead>
                       <tr class="bg-blue-500">
@@ -122,7 +132,193 @@
               </div>
         </div>
 
-        <div class="h-screen w-full page-6">
+        <div class="h-screen w-full page-6 flex flex-col justify-center">
+            <div class=" text-[60px] font-bold">
+                <h1>Theme of <span class="font-[myfont] text-[#FF80ED]">Conference</span></h1>
+            </div>
+            <div class="flex flex-wrap gap-[350px] justify-center mt-20 text-xl leading-9">
+                <ul class="list-disc">
+                    <li>Advanced Materials for Water Purification</li>
+                    <li>Advances in Sustainable Construction Materials</li>
+                    <li>Air and Noise Pollution</li>
+                    <li>Application of Nanotechnology in Water Purification</li>
+                    <li>Application of AI in Water Treatment and Purification</li>
+                    <li>Assessing, Monitoring, Modeling and Forecasting in Water</li>
+                    <li>Chemistry in the Energy Environment and Material Sciences</li>
+                    <li>Economics and Financing Aspects in Water Management</li>
+                    <li>Materials for Energy Storage</li>
+                    <li>Wastewater Treatment, Recovery and Reuse</li>
+                </ul>
+                <ul class="list-disc">
+                    <li>Machine Learning and AI Applications</li>
+                    <li>Membrane and Thermal Desalination</li>
+                    <li>Nano-materials in Energy and Environment</li>
+                    <li>Nuclear/Solar/Renewal Energy Desalination</li>
+                    <li>Recent Technologies for Water/Wastewater Treatment</li>
+                    <li>Renewable and Non-renewable Energy Resource</li>
+                    <li>Utilization of Waste Materials in Construction</li>
+                    <li>Water Policies and Planning</li>
+                    <li>Water Resources Management & Sustainability</li>
+                    <li>Water to Energy Production Technologies & Water-Energy</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="w-full min-h-screen flex flex-col page-7 justify-center mt-40 ">
+            <h1 class="text-[60px] font-bold mb-20">Sponsorship Categories</h1>
+            <div class="w-full p-6 flex flex-wrap text-black justify-evenly flex-1">
+                
+                <!-- Platinum Sponsorship -->
+                <div class="shadow-md text-black rounded-lg p-6 mb-10 w-[45%] bg-[#DAD9D5] ">
+                    <h2 class="text-2xl font-bold text-blue-600">1. Platinum Sponsorship @ Rs 5 lacs</h2>
+                    <ul class="list-disc ml-6 mt-3">
+                        <li>Logo on the Backdrop</li>
+                        <li>Logo on the Entrance Gate</li>
+                        <li>One Banner Standee at the Entrance</li>
+                        <li>10 mins Speaker Slot</li>
+                        <li>10 Delegate Passes</li>
+                        <li>3x2 Display Space</li>
+                        <li>Stall for Exhibition</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </div>
+        
+                <!-- Gold Sponsorship -->
+                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 w-[45%] ">
+                    <h2 class="text-2xl font-bold text-yellow-500">2. Gold Sponsorship @ Rs 3 lacs</h2>
+                    <ul class="list-disc ml-6 mt-3">
+                        <li>Logo on the Backdrop</li>
+                        <li>Logo on the Entrance Gate</li>
+                        <li>10 mins Speaker Slot</li>
+                        <li>5 Delegate Passes</li>
+                        <li>Stall for Exhibition</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </div>
+        
+                <!-- Silver Sponsorship -->
+                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 w-[45%] ">
+                    <h2 class="text-2xl font-bold text-gray-600">3. Silver Sponsorship @ Rs 1 lac</h2>
+                    <ul class="list-disc ml-6 mt-3">
+                        <li>Logo on the Backdrop</li>
+                        <li>Logo on the Entrance Gate</li>
+                        <li>3 Delegate Passes</li>
+                        <li>Stall for Exhibition</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </div>
+        
+                <!-- Bronze Sponsorship -->
+                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 w-[45%] ">
+                    <h2 class="text-2xl font-bold text-orange-400">4. Bronze Sponsorship @ Rs 50,000</h2>
+                    <ul class="list-disc ml-6 mt-3">
+                        <li>Logo on the Backdrop</li>
+                        <li>Logo on the Entrance Gate</li>
+                        <li>1 Delegate Pass</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </div>
+        
+                <!-- General Sponsorship -->
+                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 w-[45%] ">
+                    <h2 class="text-2xl font-bold text-green-500">5. Sponsorship @ Rs 25,000</h2>
+                    <ul class="list-disc ml-6 mt-3">
+                        <li>Logo on the Backdrop</li>
+                        <li>Logo on the Entrance Gate</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </div>
+        
+                <!-- Exhibition Zone -->
+                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 w-[45%] ">
+                    <h2 class="text-2xl font-bold text-teal-500">6. Exhibition Zone</h2>
+                    <p class="mt-3">
+                        Industries @ Rs 25,000 (Per Exhibition stall with an area of <b>3m × 3m</b>)
+                    </p>
+                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </div>
+        
+                <!-- Souvenir Advertisement Rates -->
+                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 w-[45%] ">
+                    <h2 class="text-2xl font-bold text-purple-500">Souvenir Advertisement Rates</h2>
+                    <ul class="list-disc ml-6 mt-3">
+                        <li>Front Cover Inside Page: Rs. 40,000</li>
+                        <li>Back Cover Page: Rs. 35,000</li>
+                        <li>Back Inside Page: Rs. 30,000</li>
+                        <li>Full Page Color: Rs. 15,000</li>
+                        <li>Half Page Color: Rs. 10,000</li>
+                        <li>Quarter Page Color: Rs. 6,500</li>
+                        <li>Full Page B/w: Rs. 10,000</li>
+                        <li>Half Page B/w: Rs. 7,500</li>
+                        <li>Quarter Page B/w: Rs. 4,500</li>
+                    </ul>
+                </div>
+        
+                <!-- Publications -->
+                <!-- <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-indigo-600">Publications</h2>
+                    <p class="mt-3">Selected papers will be published as book chapters and in reputed international journals of Springer/Taylor & Francis. Conference proceedings will also be published.</p>
+                    <p class="mt-3">Full papers will be invited for possible publication after peer review in the Special Issues of the following SCI/WoS-Indexed Journals:</p>
+                    <ul class="list-decimal ml-6 mt-3">
+                        <li>Special Issue of "Biomass Conversion and Biorefinery" (I.F: 4.05)</li>
+                        <li>Special Issue of "Processes" (I.F: 3.5)</li>
+                        <li>Special Issue of "Journal of Engineering" (I.F: 2.7)</li>
+                        <li>Special Issue of "Crystals" (I.F: 2.7)</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="w-full h-screen page-8 flex items-center ">
+            <div class="container mx-auto p-6">
+                <h1 class="text-[60px] font-bold mb-24">REGISTRATION</h1>
+                <div class="overflow-x-auto text-black rounded-xl bg-[#DAD9D5]">
+                  <table class="table-auto w-full border-collapse border rounded-xl overflow-hidden">
+                    <thead>
+                      <tr class="bg-blue-800">
+                        <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl">Post</th>
+                        <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl">Price (Rs.)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">Foreign Delegate (Online)</td>
+                        <td class="border border-gray-700 px-4 py-2">5000/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">Delegate from Industries/ Scientist</td>
+                        <td class="border border-gray-700 px-4 py-2">4000/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">Faculty from Academic Institutions (Non - InDA Member)</td>
+                        <td class="border border-gray-700 px-4 py-2">4000/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">Faculty from Academic Institutions (InDA Member)</td>
+                        <td class="border border-gray-700 px-4 py-2">3000/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">Post Graduate / Research Scholar (Non - InDA Member)</td>
+                        <td class="border border-gray-700 px-4 py-2">2000/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">Post Graduate / Research Scholar (InDA Member)</td>
+                        <td class="border border-gray-700 px-4 py-2">1500/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">UG/Diploma Student (Non - InDA Member)</td>
+                        <td class="border border-gray-700 px-4 py-2">1500/-</td>
+                      </tr>
+                      <tr class="text-lg">
+                        <td class="border border-gray-700 px-4 py-2">UG/Diploma Student (InDA Member)</td>
+                        <td class="border border-gray-700 px-4 py-2">1000/-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-red-500 mt-6 text-center">* 5% Additional fees for SPOT registration</p>
+              </div>
             
         </div>
     </div>
