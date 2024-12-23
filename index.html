@@ -381,23 +381,23 @@
 
         <div class="h-screen w-full noise flex page-9 relative">
                 <div class="event-img h-full w-full absolute flex justify-center items-center z-[5]">
-                    <img class="bg-blue-300 h-full w-full" src="audi.jpg" alt="">
+                    <img class="bg-blue-300 h-full w-full object-cover" src="audi.jpg" alt="">
                 </div>
                 <div class="h-full w-full flex relative justify-center items-center md:px-16">
-                    <div class="w-full h-full flex items-center justify-center p-8 absolute z-[7] noise">
-                        <div class="flex rounded-lg h-[80%] gradient-1 w-[90%]">
-                            <div class="h-full w-[30%]">
+                    <div class="w-full h-full flex md:flex-row flex-col items-center justify-center p-8 absolute z-[7] noise">
+                        <div class="flex  md:flex-row flex-col rounded-lg h-[80%] gradient-1 w-[90%]">
+                            <div class="md:h-full h-[45%] w-full md:w-[30%]">
                                 <img 
                                     src="loca.jpeg"
                                     alt="Palace Arts Center"
                                     class="rounded-lg w-full h-full object-cover"
                                 >
                             </div>
-                            <div class="flex-1 pl-16 space-y-8 noise p-8 flex items-center">
+                            <div class="flex-1 md:pl-16 space-y-8 noise p-8 flex items-center">
                                 <div class="space-y-6">
-                                    <p class="text-pink-500 text-[1.2rem] font-[heading1] font-medium tracking-wider">THE VENUE</p>
+                                    <p class="text-pink-500 text-[4vw] md:text-[1.2rem] font-[heading1] font-medium tracking-wider">THE VENUE</p>
                                     
-                                    <h2 class="text-4xl font-bold text-white tracking-wider font-[heading2]">
+                                    <h2 class="text-[4vw] md:text-4xl font-bold text-white tracking-wider font-[heading2]">
                                         HARCOURT BUTLER<br>TECHNICAL UNIVERSITY
                                     </h2>
                                     
@@ -406,12 +406,12 @@
                                     </p>
                                     
                                     <div class="flex space-x-8 pt-4">
-                                        <a href="#" class="text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                        <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
                                             <span>01. CITY GUIDE</span>
                                             <span class="ml-2">→</span>
                                         </a>
                                         
-                                        <a href="#" class="text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                        <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
                                             <span>02. DIRECTIONS</span>
                                             <span class="ml-2">→</span>
                                         </a>
@@ -423,9 +423,9 @@
                 </div>
         </div>
 
-        <div class="w-full max-h-screen flex flex-col items-center page-10 noise md:px-16">
+        <div class="w-full max-h-screen flex flex-col items-center page-10 noise md:px-16 px-8">
             <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw]">
-                <h1>Payment Mode:  <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
+                <h1>Payment Mode: <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
             </div>
             <div class="p-8 w-full flex flex-col md:text-[1.1rem] font-semibold leading-8 rounded-xl pb-[10vw] tracking-wide">
                 <h1>Bank : <span>Central Bank Of India</span></h1>
@@ -436,17 +436,14 @@
             </div>        
         </div>
 
-        <footer class="h-1/2 w-full flex">
-            <div class="container mx-auto py-20 text-center">
-                <h2 class="text-4xl font-bold font-[heading1] tracking-wider">INDACON 2025</h2>
+        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10">
+            <div class="container mx-auto py-10 md:py-20 text-center">
+                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider">INDACON 2025</h2>
             </div>
-            
-            <!-- Contact Section -->
-            <div class="container mx-auto py-8 px-4">
+            <div class="container mx-auto md:py-8 px-8">
                 <div class="max-w-4xl mx-auto">
                     <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
-                    <div class="flex ">
-                        <!-- Faculty Contact -->
+                    <div class="flex">
                         <div class="flex flex-col pb-6">
                             <p class="font-semibold pb-2">Faculty Coordinators:</p>
                             <ul class="space-y-1">
