@@ -13,7 +13,6 @@ const main=document.querySelector(".main")
 const page1=document.querySelector(".page-1")
 
 main.addEventListener("mousewheel",function(e){
-    // console.log(page1.getBoundingClientRect())
     if(page1.getBoundingClientRect().bottom>0 && e.wheelDelta>0){
         bar.classList.remove("going-up")
         bar.classList.remove("going-down")
@@ -21,13 +20,29 @@ main.addEventListener("mousewheel",function(e){
     else if(e.wheelDelta<0){
         bar.classList.remove("going-up")
         bar.classList.add("going-down")
-        // console.log("down")
     }
     else{
-        // console.log("up")
         bar.classList.remove("going-down")
         bar.classList.add("going-up")
-        // bar.classList.toggle("sticky")
     }
 })
+let start
+let previous
+window.addEventListener("touchstart",function(e){
+    start=e.changedTouches[0].clientY
+    // console.log("starting",start)
+})
+window.addEventListener("touchmove",function(e){
+    previous=e.changedTouches[0].clientY
+    // console.log(previous)
+    if(start>previous){
+        bar.classList.remove("going-up")
+        bar.classList.add("going-down")
+    }
+    else{
+        bar.classList.remove("going-down")
+        bar.classList.add("going-up")
+    }
+})
+
 
