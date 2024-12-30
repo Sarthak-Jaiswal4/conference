@@ -37,36 +37,40 @@
             -ms-transform: rotate(-7deg);
             transform: rotate(-8deg)
         }
+        .bur-line {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .burger-open .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger-open .line2 {
+      opacity: 0;
+    }
+    .burger-open .line3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
     </style>
 </head>
 <body>
     <div class="main w-full h-full bg-[#0d0d0a] text-white relative">
-        <div class="inset-0 bg-black h-screen sidemenu absolute z-[9999] hidden">
-            <div class="w-full h-full noise p-6">
-                <div class="flex justify-end">
-                    <button onclick="sideclose()" class="text-white text-5xl pr-4">&times;</button>
-                </div>
-                
-                <!-- Logo -->
-                <div class="text-white text-4xl font-bold mb-8 font-[heading1] pt-10">InDACON</div>
-                
-                <!-- Main Navigation -->
-                <nav class="mb-16">
-                    <ul class="space-y-4">
-                        <li><a href="about.html" class="text-white text-2xl font-medium hover:text-pink-500 ">About</a></li>
-                        <li><a href="speaker.html" class="text-white text-2xl font-medium hover:text-pink-500">Speakers</a></li>
-                        <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="gotoschedule()" >Schedule</a></li>
-                        <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="sponserclk()">Sponsors</a></li>
-                    </ul>
-                </nav>
-                
-                <!-- Register Button -->
-                <button onclick="registerclk()" class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 rounded font-bold mb-8">
-                    REGISTER TODAY
-                </button>
-                
+        <div  class="sidemenu bg-black h-full w-full">
                 <!-- Social Icons -->
-                <div class="flex space-x-6 mb-8">
+                
+                <nav id="menu" class="fixed top-0 left-0 w-full h-screen bg-black shadow-lg z-[9999]">
+                   <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON</div>
+                   <button id="closebtn" class="fixed top-4 right-4 p-2 z-[99999] rounded-lg">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4L20 20" stroke-linecap="round"></path>
+                        <path d="M20 4L4 20" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                   <div class="px-16 mt-16 overflow-hidden flex flex-col gap-8">
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                   </div>
+                   <div class="flex space-x-6 mb-8 pt-24 px-8"> 
                     <a href="#" class="text-white hover:text-gray-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
@@ -88,9 +92,8 @@
                         </svg>
                     </a>
                 </div>
-            </div>
+                </nav>
         </div>
-        <!-- <div class="h-[20px] w-[20px] rounded-full border-2 border-grey-800 Cursor absolute z-[9999]"></div> -->
         <div class="w-full h-full">
             <div class="page-1 w-full flex flex-col h-screen relative gradient-1">
                 <div class="gradient-2 h-full w-full">
@@ -98,7 +101,7 @@
                         <div class="noise h-full w-full px-12 relative">                       
                             <nav class="w-full flex justify-between	h-20 py-4 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
                                 <div class="flex">
-                                    <a class="font-semibold md:text-[2.5vw] text-[5vw] font-[heading1] nav" href="index.html">InDACON</a>
+                                    <a class="font-semibold md:text-[2.5vw] text-[6vw] leading-[30px] font-[heading1] nav" href="index.html">InDACON</a>
                                 </div>
                                 <div class="flex gap-16 items-center nav">
                                     <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
@@ -108,10 +111,10 @@
                                 </div>
                                 <div class="flex">
                                     <button class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
-                                    <button class="flex flex-col justify-center space-y-1.5 p-2 group md:hidden block" onclick="menuopen()">
-                                        <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
-                                        <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
-                                        <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
+                                    <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
+                                        <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                          <path d="M4 6h16M4 12h16M4 18h16"></path>
+                                        </svg>
                                     </button>
                                 </div>
                             </nav>
@@ -130,7 +133,7 @@
                 </div>
             </div>
     
-            <div class="md:h-auto h-full w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif tracking-[2px] md:leading-[6rem] noise gradient-3 relative">
+            <div class="md:h-auto h-full m-0 w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif tracking-[4px] md:leading-[7.1rem] noise gradient-3 relative">
                 <div class="gradient-2-2 px-7 md:px-8">
                     <div class="w-full h-full mt-52 mb-40 md:px-[130px] quote-cont">
                         <h1 class="quote">“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & <span class="relative font-[hello] text-[9vw] md:text-[8vw]"> Enviromental <strong class="circle"></strong></span> conservation "</h1>
@@ -259,63 +262,61 @@
                   </div>
             </div>
     
-            <div class="min-h-screen w-full page-6 flex flex-nowrap flex-col noise py-20 relative">
-                <!-- <div class="text-[2rem] md:text-[10vw] font-bold font-[heading1] theme-heading headingthem px-8 md:px-16 flex absolute overflow flex-nowrap top-10 ">
-                    <h1 class="flex flex-nowrap opcaity-50">Theme of <span class="font-[heading1] text-[#FF80ED] opacity-40">Conference</span></h1>
-                </div> -->
-                <div class="relative w-full h-screen text-revel flex items-center overflow-hidden">
-                    <h1 id="scrollText" class="absolute left-0 font-bold text-white whitespace-nowrap text-[18vw] font-sans">
-                      Theme of <span class="font-sans text-[#FF80ED]">Conference</span>
+            <div class="min-h-screen w-full page-6 flex flex-nowrap flex-col noise px-8 md:px-16">
+                <div class="relative w-full h-full text-revel flex items-center overflow-hidden">
+                    <h1 id="theme-head" class="theme-head font-bold text-white text-[2rem] md:text-[4rem] font-[heading2] w-[60%]">
+                        Empowering Ideas, Shaping Futures: <span class="font-[heading2] text-[#FF80ED]"> The Conference Revolution</span>
                     </h1>
                 </div>
-                <div class="h-full flex w-full py-28 md:py-20">
-                    <div class="relative overflow-hidden w-full py-20 h-[100vw] md:h-[35vw] flex space-y-[20vw] md:space-y-[9.5vw]">
-                        <div id="marquee" class="absolute flex items-center text-white text-[4rem] md:text-[7vw] font-medium whitespace-nowrap">
-                          <span>Advanced Materials for Water Purification.</span>
-                          <span>Advances in Sustainable Construction Materials.</span>
-                          <span>Application of Nanotechnology in Water Purification.</span>
-                        </div>
-                        <div id="marquee1" class="absolute flex items-center text-white text-[4rem] md:text-[7vw] font-medium whitespace-nowrap">
-                            <span>Economics and Financing Aspects in Water Management.</span>
-                            <span>Materials for Energy Storage.</span>
-                            <span>Wastewater Treatment, Recovery and Reuse.</span>
-                        </div>
-                        <div id="marquee2" class="absolute flex items-center text-white text-[4rem] md:text-[7vw] font-medium whitespace-nowrap md:pt-[9.5vw] pt-[20vw]">
-                            <span>Utilization of Waste Materials in Construction.</span>
-                            <span>Water Policies and Planning.</span>
-                            <span>Water Resources Management & Sustainability.</span>
-                        </div>
+                <div class="h-full w-full flex md:gap-2 flex-col md:flex-row gap-[4rem] pb-32">
+                    <div class="w-0 md:w-[60%] h-full">
+                    </div>
+                    <div class="them-list h-full flex flex-col justify-center gap-4 text-[1rem] md:text-[1.7rem] items-start text-left w-full md:w-[40%] theme-lines">
+                            <div class="flex flex-col gap-3">
+                                <h1>Advanced Materials for Water Purification</h1>
+                                <div id="liness" class="theme-line h-[2px] m-0"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Advances in Sustainable Construction Materials</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Air and Noise Pollution</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Materials for Energy Storage</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Wastewater Treatment, Recovery and Reuse</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Water Policies and Planning</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Membrane and Thermal Desalination</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
                     </div>
                     <!-- <ul class="list-disc them-list">
-                        <li>Advanced Materials for Water Purification</li>
-                        <li>Advances in Sustainable Construction Materials</li>
-                        <li>Air and Noise Pollution</li>
-                        <li>Application of Nanotechnology in Water Purification</li>
-                        <li>Application of AI in Water Treatment and Purification</li>
-                        <li>Assessing, Monitoring, Modeling and Forecasting in Water</li>
-                        <li>Chemistry in the Energy Environment and Material Sciences</li>
-                        <li>Economics and Financing Aspects in Water Management</li>
-                        <li>Materials for Energy Storage</li>
-                        <li>Wastewater Treatment, Recovery and Reuse</li>
-                    </ul>
-                    <ul class="list-disc them-list">
                         <li>Machine Learning and AI Applications</li>
-                        <li>Membrane and Thermal Desalination</li>
                         <li>Nano-materials in Energy and Environment</li>
                         <li>Nuclear/Solar/Renewal Energy Desalination</li>
                         <li>Recent Technologies for Water/Wastewater Treatment</li>
                         <li>Renewable and Non-renewable Energy Resource</li>
                         <li>Utilization of Waste Materials in Construction</li>
-                        <li>Water Policies and Planning</li>
                         <li>Water Resources Management & Sustainability</li>
                         <li>Water to Energy Production Technologies & Water-Energy</li>
                     </ul> -->
                 </div>
             </div>
     
-            <div class="w-full min-h-screen page-8 flex items-center noise px-8 md:px-16" id="register">
+            <div class="w-full min-h-screen page-8 flex items-center noise px-8 md:px-16" id="register" name="register">
                 <div class="container mx-auto p-6">
-                    <h1 class="md:text-[4rem] text-[2rem] font-bold mb-12 font-[heading1] headingreg">REGISTRATION</h1>
+                    <h1 class="md:text-[4rem] text-[1.9rem] font-bold mb-12 font-[heading1] headingreg">REGISTRATION</h1>
                     <div class="overflow-x-auto text-black rounded-xl bg-[#DAD9D5]">
                         <table class="table-auto w-full border-collapse border rounded-xl overflow-hidden">
                             <thead>
@@ -412,7 +413,7 @@
             </div>
     
             <div class="w-full max-h-screen flex flex-col items-center page-10 noise md:px-16 px-8">
-                <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw]">
+                <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw] footerhead">
                     <h1>Payment Mode: <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
                 </div>
                 <div class="p-8 w-full flex flex-col md:text-[1.1rem] font-semibold leading-8 rounded-xl pb-[10vw] tracking-wide">
@@ -425,12 +426,12 @@
             </div>
         </div>
 
-        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 ">
+        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 footer-page">
             <div class="container mx-auto py-10 md:py-20 text-center">
-                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider">InDACON 2025</h2>
+                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer">InDACON 2025</h2>
             </div>
             <div class="container mx-auto md:py-8 px-8">
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-4xl mx-auto footer">
                     <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
                     <div class="flex">
                         <div class="flex flex-col pb-6">
