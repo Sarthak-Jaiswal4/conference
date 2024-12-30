@@ -40,459 +40,392 @@
     </style>
 </head>
 <body>
-    <div class="inset-0 bg-black h-screen sidemenu absolute z-[9999] hidden">
-        <div class="w-full h-full noise p-6">
-            <div class="flex justify-end">
-                <button onclick="sideclose()" class="text-white text-5xl pr-4">&times;</button>
-            </div>
-            
-            <!-- Logo -->
-            <div class="text-white text-4xl font-bold mb-8 font-[heading1] pt-10">InDACON</div>
-            
-            <!-- Main Navigation -->
-            <nav class="mb-16">
-                <ul class="space-y-4">
-                    <li><a href="about.html" class="text-white text-2xl font-medium hover:text-pink-500 ">About</a></li>
-                    <li><a href="speaker.html" class="text-white text-2xl font-medium hover:text-pink-500">Speakers</a></li>
-                    <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="gotoschedule()" >Schedule</a></li>
-                    <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="sponserclk()">Sponsors</a></li>
-                </ul>
-            </nav>
-            
-            <!-- Register Button -->
-            <button onclick="registerclk()" class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 rounded font-bold mb-8">
-                REGISTER TODAY
-            </button>
-            
-            <!-- Social Icons -->
-            <div class="flex space-x-6 mb-8">
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
-                    </svg>
-                </a>
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
-                </a>
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="main w-full h-full bg-[#0d0d0a] text-white relative">
-        <!-- <div class="h-[20px] w-[20px] rounded-full border-2 border-grey-800 Cursor absolute z-[9999]"></div> -->
-        <div class="page-1 w-full flex flex-col h-screen relative gradient-1">
-            <div class="gradient-2 h-full w-full">
-                <div class="gradient-3 gradient-2 h-full w-full">
-                    <div class="noise h-full w-full px-12 relative">
-                        
-                        <nav class="w-full flex justify-between	h-20 py-4 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
-                            <div class="flex">
-                                <a class="font-semibold md:text-[2.5vw] text-[5vw] font-[heading1]" href="index.html">InDACON</a>
-                            </div>
-                            <div class="flex gap-20 items-center">
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
-                            </div>
-                            <div class="flex">
-                                <button class="w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
-                                <button class="flex flex-col justify-center space-y-1.5 p-2 group md:hidden block" onclick="menuopen()">
-                                    <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
-                                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
-                                    <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
-                                </button>
-                            </div>
-                        </nav>
-                        <div class="w-full h-[85%] flex justify-center items-center text-[9vw] md:text-[5.5vw] flex-col leading-[8vw] md:leading-[3.5vw] font-[700] tracking-tight relative mb-5 font-[heading2]">
-                            <h1 class="font-serif md:text-[2.5vw] text-[1.7rem] pb-16 font-medium tracking-wide">February 20th-22th</h1>
-                            <div class="flex flex-col gap-[1.5rem] md:flex-row text-center tracking-tight pb-1 flex-col text-[2rem] md:text-[4.5vw]">
-                                <h1>INTERNATIONAL</h1>
-                                <h1>CONFERENCE</h1>
-                            </div>
-                            <br>
-                            <h1 class="text-[1.7rem] md:text-[4.5vw]">InDACON - 2025</h1>
-                            <button class="text-[1.2rem] md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] rounded-full text-[#0A0470] absolute bottom-[-2%] bg-gradient-to-r from-[#FF84E0] tracking-normal to-[#FEC35A]  hover:outine" onclick="registerclk()">Register For Conference</button>
-                        </div>
-                    </div>
+        <div class="inset-0 bg-black h-screen sidemenu absolute z-[9999] hidden">
+            <div class="w-full h-full noise p-6">
+                <div class="flex justify-end">
+                    <button onclick="sideclose()" class="text-white text-5xl pr-4">&times;</button>
                 </div>
-            </div>
-        </div>
-
-        <div class="md:h-auto h-full w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif tracking-[2px] md:leading-[6rem] noise gradient-3 relative">
-            <div class="gradient-2-2 px-7 md:px-8">
-                <div class="w-full h-full mt-52 mb-40 md:px-[130px] ">
-                    <h1>“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & <span class="relative font-[hello] text-[9vw] md:text-[8vw]"> Enviromental <strong class="circle"></strong></span> conservation "</h1>
-                </div>
-
-            </div>
-        </div>
-        <div class="page-3 w-full h-auto flex gap-5 md:gap-12 flex-col md:flex-row noise px-8 md:px-16">
-            <div class=" text-[2rem] font-bold mt-[8vw] md:my-[10vw] md:w-full md:text-[4rem] leading-[1.35em] font-[heading1]">About the <span class="font-[heading1] text-[#FF80ED]">Conference</span></div>
-            <div class="flex flex-col gap-10 md:text-[1.2rem] mt-[8vw] leading-9 md:w-full mb-[10vw] ">
-                <h2>This International Conference, organized by the Departments of Chemical and Biochemical Engineering at Harcourt Butler Technical University (HBTU) in collaboration with the Indian Desalination Association (InDA), will focus on trends in desalination, water, energy, and the environment. Key topics include wastewater treatment, water resource management, purification methods, and waste management.</h2>
-                <h2>Experts will share insights on advanced material synthesis and its applications in tackling challenges in desalination, energy, and environmental sustainability. Technical sessions will highlight innovative technologies and strategies to address these pressing global issues effectively.
-                </h2>
-                <h2>The event will foster collaboration among researchers, industry professionals, and policymakers. Through workshops and discussions, participants can exchange ideas on emerging solutions, contributing to advancements in sustainable water and energy management.</h2>
-            </div>
-        </div>
-
-        <div class="page-4 w-full h-auto flex flex-col gap-8 noise px-8 md:px-16">
-            <div class="h-full w-full md:mb-16">
-                <div>
-                    <h1 class="font-[heading1] text-[2rem] md:text-[4rem] font-bold tracking-wider pb-12 font-semibold underline decoration-2 underline-offset-[12px]">Speakers</h1>
-                </div>
-    
-                <div class="w-full h-full flex flex-wrap flex-col md:flex-row justify-between pb-12 md:pb-16">
-                    <div class="rounded-2xl py-6 h-auto w-auto basis-1/5">
-                        <div class="w-full flex justify-center items-center pb-6">
-                            <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/dalai-profile.jpg" alt="">
-                        </div>
-                        <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                            <h1 class="font-medium mb-[8px]">Prof. Ajay K. Dalai</h1>
-                            <h1>University of Saskatchewan</h1>
-                            <h1>Canada</h1>
-                        </div>
-                    </div>
-                    <div class=" rounded-2xl py-6 basis-1/5">
-                        <div class="w-full flex justify-center items-center pb-6">
-                            <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/meda-profile-2022.jpg" alt="">
-                        </div>
-                        <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                            <h1 class="font-medium mb-[8px]">Prof. Venkatesh Meda</h1>
-                            <h1>University of Saskatchewan</h1>
-                            <h1>Canada</h1>
-                        </div>
-                    </div>
-                    <div class="rounded-2xl py-6 basis-1/5">
-                        <div class="w-full flex justify-center items-center pb-6">
-                            <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/mehrotra.jpg" alt="">
-                        </div>
-                        <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                            <h1 class="font-medium mb-[8px]">Prof. Anil Mehrotra</h1>
-                            <h1>University of Calgary</h1>
-                            <h1>Canada</h1>
-                        </div>
-                    </div>
-                    <div class="rounded-2xl py-6 basis-1/5">
-                        <div class="w-full flex justify-center items-center pb-6">
-                            <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/P23144TA210090_p_6 square.jpg" alt="">
-                        </div>
-                        <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                            <h1 class="font-medium mb-[8px]">Prof. Amar Mohanty</h1>
-                            <h1>University of Guelph</h1>
-                            <h1>Canada</h1>
-                        </div>
-                    </div>
-                    <div class="rounded-2xl py-6 basis-1/5">
-                        <div class="w-full flex justify-center items-center pb-6">
-                            <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="5.jpeg" alt="">
-                        </div>
-                        <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                            <h1 class="font-medium mb-[8px]">Prof. Manjusri Mishra</h1>
-                            <h1>University of Guelph</h1>
-                            <h1>Canada</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full h-full text-2xl md:text-xl font-semibold tracking-wide flex justify-end px-8 ">
-                    <a class="font-[heading2] underline md:hover:underline underline-offset-8 hover:text-[1.4rem] duration-300 cursor-pointer ease-in-out" href="speaker.html">All Speakers</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-5 w-full max-h-screen flex items-center noise px-8 md:px-16" id="schedule">
-            <div class="w-full text-white rounded-lg px-6 md:mt-[6vw] mt-36 mb-36">
-                <h2 class="text-[2rem] md:text-[4rem] font-[heading1] font-bold tracking-wider mb-12 ">Important Dates</h2>
-                <table class="table-auto w-full border-collapse border border-blue-500 rounded-lg overflow-hidden">
-                    <thead>
-                      <tr class="bg-blue-500">
-                        <th class="border border-blue-500 px-4 py-2 text-left md:text-[1.7rem]">Event</th>
-                        <th class="border border-blue-500 px-4 py-2 text-left md:text-[1.7rem]">Date</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission Start</td>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">16/06/2024</td>
-                      </tr>
-                      <tr>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission End</td>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">30/11/2024</td>
-                      </tr>
-                      <tr>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Announcement of Acceptance of Abstract</td>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">10/12/2024</td>
-                      </tr>
-                      <tr>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Last Date of Online Registration</td>
-                        <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">30/12/2024</td>
-                      </tr>
-                    </tbody>
-                  </table>
-              </div>
-        </div>
-
-        <div class="min-h-screen w-full page-6 flex flex-col justify-center noise px-8 md:px-16">
-            <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1]">
-                <h1>Theme of <span class="font-[heading1] text-[#FF80ED]">Conference</span></h1>
-            </div>
-            <div class="flex flex-wrap gap-0 md:gap-[8vw] justify-center mt-10 flex-col md:flex-row  md:text-[1.15rem] pl-4 leading-8">
-                <ul class="list-disc">
-                    <li>Advanced Materials for Water Purification</li>
-                    <li>Advances in Sustainable Construction Materials</li>
-                    <li>Air and Noise Pollution</li>
-                    <li>Application of Nanotechnology in Water Purification</li>
-                    <li>Application of AI in Water Treatment and Purification</li>
-                    <li>Assessing, Monitoring, Modeling and Forecasting in Water</li>
-                    <li>Chemistry in the Energy Environment and Material Sciences</li>
-                    <li>Economics and Financing Aspects in Water Management</li>
-                    <li>Materials for Energy Storage</li>
-                    <li>Wastewater Treatment, Recovery and Reuse</li>
-                </ul>
-                <ul class="list-disc">
-                    <li>Machine Learning and AI Applications</li>
-                    <li>Membrane and Thermal Desalination</li>
-                    <li>Nano-materials in Energy and Environment</li>
-                    <li>Nuclear/Solar/Renewal Energy Desalination</li>
-                    <li>Recent Technologies for Water/Wastewater Treatment</li>
-                    <li>Renewable and Non-renewable Energy Resource</li>
-                    <li>Utilization of Waste Materials in Construction</li>
-                    <li>Water Policies and Planning</li>
-                    <li>Water Resources Management & Sustainability</li>
-                    <li>Water to Energy Production Technologies & Water-Energy</li>
-                    
-                </ul>
-            </div>
-        </div>
-
-        <div class="w-full min-h-screen flex flex-col page-7 justify-center noise px-8 md:px-16" id="sponser">
-            <h1 class="text-[2rem] md:text-[4rem] font-[heading1] font-bold mb-12 mt-32 mb-12">Sponsorship Categories</h1>
-            <div class="w-full p-6 flex flex-wrap text-black justify-evenly flex-1">
                 
-                <!-- Platinum Sponsorship -->
-                <div class="shadow-md text-black rounded-lg p-6 mb-10 md:w-[45%] w-full bg-[#DAD9D5] ">
-                    <h2 class="text-2xl font-bold text-blue-600">1. Platinum Sponsorship @ Rs 5 lacs</h2>
-                    <ul class="list-disc ml-6 mt-3">
-                        <li>Logo on the Backdrop</li>
-                        <li>Logo on the Entrance Gate</li>
-                        <li>One Banner Standee at the Entrance</li>
-                        <li>10 mins Speaker Slot</li>
-                        <li>10 Delegate Passes</li>
-                        <li>3x2 Display Space</li>
-                        <li>Stall for Exhibition</li>
+                <!-- Logo -->
+                <div class="text-white text-4xl font-bold mb-8 font-[heading1] pt-10">InDACON</div>
+                
+                <!-- Main Navigation -->
+                <nav class="mb-16">
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-white text-2xl font-medium hover:text-pink-500 ">About</a></li>
+                        <li><a href="speaker.html" class="text-white text-2xl font-medium hover:text-pink-500">Speakers</a></li>
+                        <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="gotoschedule()" >Schedule</a></li>
+                        <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="sponserclk()">Sponsors</a></li>
                     </ul>
-                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                </nav>
+                
+                <!-- Register Button -->
+                <button onclick="registerclk()" class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 rounded font-bold mb-8">
+                    REGISTER TODAY
+                </button>
+                
+                <!-- Social Icons -->
+                <div class="flex space-x-6 mb-8">
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
                 </div>
-        
-                <!-- Gold Sponsorship -->
-                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full ">
-                    <h2 class="text-2xl font-bold text-yellow-500">2. Gold Sponsorship @ Rs 3 lacs</h2>
-                    <ul class="list-disc ml-6 mt-3">
-                        <li>Logo on the Backdrop</li>
-                        <li>Logo on the Entrance Gate</li>
-                        <li>10 mins Speaker Slot</li>
-                        <li>5 Delegate Passes</li>
-                        <li>Stall for Exhibition</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                </div>
-        
-                <!-- Silver Sponsorship -->
-                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full ">
-                    <h2 class="text-2xl font-bold text-gray-600">3. Silver Sponsorship @ Rs 1 lac</h2>
-                    <ul class="list-disc ml-6 mt-3">
-                        <li>Logo on the Backdrop</li>
-                        <li>Logo on the Entrance Gate</li>
-                        <li>3 Delegate Passes</li>
-                        <li>Stall for Exhibition</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                </div>
-        
-                <!-- Bronze Sponsorship -->
-                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
-                    <h2 class="text-2xl font-bold text-orange-400">4. Bronze Sponsorship @ Rs 50,000</h2>
-                    <ul class="list-disc ml-6 mt-3">
-                        <li>Logo on the Backdrop</li>
-                        <li>Logo on the Entrance Gate</li>
-                        <li>1 Delegate Pass</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                </div>
-        
-                <!-- General Sponsorship -->
-                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
-                    <h2 class="text-2xl font-bold text-green-500">5. Sponsorship @ Rs 25,000</h2>
-                    <ul class="list-disc ml-6 mt-3">
-                        <li>Logo on the Backdrop</li>
-                        <li>Logo on the Entrance Gate</li>
-                    </ul>
-                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                </div>
-        
-                <!-- Exhibition Zone -->
-                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
-                    <h2 class="text-2xl font-bold text-teal-500">6. Exhibition Zone</h2>
-                    <p class="mt-3">
-                        Industries @ Rs 25,000 (Per Exhibition stall with an area of <b>3m × 3m</b>)
-                    </p>
-                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                </div>
-        
-                <!-- Souvenir Advertisement Rates -->
-                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
-                    <h2 class="text-2xl font-bold text-purple-500">Souvenir Advertisement Rates</h2>
-                    <ul class="list-disc ml-6 mt-3">
-                        <li>Front Cover Inside Page: Rs. 40,000</li>
-                        <li>Back Cover Page: Rs. 35,000</li>
-                        <li>Back Inside Page: Rs. 30,000</li>
-                        <li>Full Page Color: Rs. 15,000</li>
-                        <li>Half Page Color: Rs. 10,000</li>
-                        <li>Quarter Page Color: Rs. 6,500</li>
-                        <li>Full Page B/w: Rs. 10,000</li>
-                        <li>Half Page B/w: Rs. 7,500</li>
-                        <li>Quarter Page B/w: Rs. 4,500</li>
-                    </ul>
-                </div>
-        
-                <!-- Publications -->
-                <!-- <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-6">
-                    <h2 class="text-2xl font-bold text-indigo-600">Publications</h2>
-                    <p class="mt-3">Selected papers will be published as book chapters and in reputed international journals of Springer/Taylor & Francis. Conference proceedings will also be published.</p>
-                    <p class="mt-3">Full papers will be invited for possible publication after peer review in the Special Issues of the following SCI/WoS-Indexed Journals:</p>
-                    <ul class="list-decimal ml-6 mt-3">
-                        <li>Special Issue of "Biomass Conversion and Biorefinery" (I.F: 4.05)</li>
-                        <li>Special Issue of "Processes" (I.F: 3.5)</li>
-                        <li>Special Issue of "Journal of Engineering" (I.F: 2.7)</li>
-                        <li>Special Issue of "Crystals" (I.F: 2.7)</li>
-                    </ul>
-                </div> -->
             </div>
         </div>
-
-        <div class="w-full min-h-screen page-8 flex items-center noise px-8 md:px-16" id="register">
-            <div class="container mx-auto p-6">
-                <h1 class="md:text-[4rem] text-[2rem] font-bold mb-12 font-[heading1]">REGISTRATION</h1>
-                <div class="overflow-x-auto text-black rounded-xl bg-[#DAD9D5]">
-                    <table class="table-auto w-full border-collapse border rounded-xl overflow-hidden">
+        <!-- <div class="h-[20px] w-[20px] rounded-full border-2 border-grey-800 Cursor absolute z-[9999]"></div> -->
+        <div class="w-full h-full">
+            <div class="page-1 w-full flex flex-col h-screen relative gradient-1">
+                <div class="gradient-2 h-full w-full">
+                    <div class="gradient-3 gradient-2 h-full w-full">
+                        <div class="noise h-full w-full px-12 relative">                       
+                            <nav class="w-full flex justify-between	h-20 py-4 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
+                                <div class="flex">
+                                    <a class="font-semibold md:text-[2.5vw] text-[5vw] font-[heading1] nav" href="index.html">InDACON</a>
+                                </div>
+                                <div class="flex gap-16 items-center nav">
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                                </div>
+                                <div class="flex">
+                                    <button class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
+                                    <button class="flex flex-col justify-center space-y-1.5 p-2 group md:hidden block" onclick="menuopen()">
+                                        <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
+                                        <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                                        <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="w-full h-[95%] flex justify-center items-center text-[9vw] md:text-[5.5vw] flex-col leading-[8vw] md:leading-[3.5vw] font-[700] tracking-tight relative mb-5 font-[heading2] overflow-hidden">
+                                <h1 class="font-serif md:text-[2.5vw] text-[1.7rem] pb-16 font-medium tracking-wide">February 20th-22th</h1>
+                                <div class="flex flex-col gap-[1.5rem] md:flex-row text-center tracking-tight pb-1 flex-col text-[2rem] md:text-[4.5vw]">
+                                    <h1 class="hero-para">INTERNATIONAL</h1>
+                                    <h1 class="hero-para">CONFERENCE</h1>
+                                </div>
+                                <br>
+                                <h1 class="text-[1.7rem] md:text-[4.5vw] hero-para">InDACON - 2025</h1>
+                                <button class="register-btn text-[1.2rem] md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] rounded-full text-[#0A0470] absolute bottom-[5%] bg-gradient-to-r from-[#FF84E0] tracking-normal to-[#FEC35A]  hover:outine" onclick="registerclk()">Register For Conference</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="md:h-auto h-full w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif tracking-[2px] md:leading-[6rem] noise gradient-3 relative">
+                <div class="gradient-2-2 px-7 md:px-8">
+                    <div class="w-full h-full mt-52 mb-40 md:px-[130px] quote-cont">
+                        <h1 class="quote">“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & <span class="relative font-[hello] text-[9vw] md:text-[8vw]"> Enviromental <strong class="circle"></strong></span> conservation "</h1>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="page-3 w-full h-auto flex gap-5 md:gap-12 flex-col md:flex-row noise px-8 md:px-16">
+                <div class=" text-[2rem] font-bold mt-[8vw] md:my-[10vw] md:w-full md:text-[4rem] leading-[1.35em] font-[heading1] about">About the <span class="font-[heading1] text-[#FF80ED]">Conference</span></div>
+                <div class="flex flex-col gap-10 md:text-[1.2rem] mt-[8vw] leading-9 md:w-full mb-[10vw] ">
+                    <h2 class="about-para">This International Conference, organized by the Departments of Chemical and Biochemical Engineering at Harcourt Butler Technical University (HBTU) in collaboration with the Indian Desalination Association (InDA), will focus on trends in desalination, water, energy, and the environment. Key topics include wastewater treatment, water resource management, purification methods, and waste management.</h2>
+                    <h2 class="about-para">Experts will share insights on advanced material synthesis and its applications in tackling challenges in desalination, energy, and environmental sustainability. Technical sessions will highlight innovative technologies and strategies to address these pressing global issues effectively.
+                    </h2>
+                    <h2 class="about-para">The event will foster collaboration among researchers, industry professionals, and policymakers. Through workshops and discussions, participants can exchange ideas on emerging solutions, contributing to advancements in sustainable water and energy management.</h2>
+                </div>
+            </div>
+    
+            <div class="page-4 w-full h-auto flex flex-col gap-8 noise px-8 md:px-16">
+                <div class="h-full w-full md:mb-16">
+                    <div class="speaker-heading relative">
+                        <h1 class="font-[heading1] text-[2rem] md:text-[4rem] font-bold tracking-wider pb-12 font-semibold underline decoration-2 underline-offset-[12px] speakheading">Speakers</h1>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="absolute top-[5%]">
+                            <path 
+                            d="M 0,10 
+                                L 85,10 
+                                Q 100,10 99,19
+                                L 99,45
+                                Q 99,50 94,50
+                                L 80,50"
+                            stroke="white" 
+                            stroke-width="1"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            fill="none"
+                          />
+                          </svg> -->
+                    </div>
+        
+                    <div class="w-full h-full flex flex-wrap flex-col md:flex-row justify-between pb-12 md:pb-16 collage">
+                        <div class="rounded-2xl py-6 h-auto w-auto basis-1/5 photo">
+                            <div class="w-full flex justify-center items-center pb-6">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/dalai-profile.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px]">Prof. Ajay K. Dalai</h1>
+                                <h1>University of Saskatchewan</h1>
+                                <h1>Canada</h1>
+                            </div>
+                        </div>
+                        <div class=" rounded-2xl py-6 basis-1/5 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/meda-profile-2022.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px]">Prof. Venkatesh Meda</h1>
+                                <h1>University of Saskatchewan</h1>
+                                <h1>Canada</h1>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl py-6 basis-1/5 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/mehrotra.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px]">Prof. Anil Mehrotra</h1>
+                                <h1>University of Calgary</h1>
+                                <h1>Canada</h1>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl py-6 basis-1/5 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/P23144TA210090_p_6 square.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px]">Prof. Amar Mohanty</h1>
+                                <h1>University of Guelph</h1>
+                                <h1>Canada</h1>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl py-6 basis-1/5 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="5.jpeg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px]">Prof. Manjusri Mishra</h1>
+                                <h1>University of Guelph</h1>
+                                <h1>Canada</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-full text-2xl md:text-xl font-semibold tracking-wide flex justify-end px-8 ">
+                        <a class="font-[heading2] underline md:hover:underline underline-offset-8 hover:text-[1.4rem] duration-300 cursor-pointer ease-in-out" href="speaker.html">All Speakers</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="page-5 w-full max-h-screen flex items-center noise px-8 md:px-16" id="schedule">
+                <div class="w-full text-white rounded-lg px-6 md:mt-[6vw] mt-36 mb-36 ">
+                    <h2 class="text-[2rem] md:text-[4rem] font-[heading1] font-bold tracking-wider mb-12 imp-heading headingimp">Important Dates</h2>
+                    <table class="table-auto w-full border-collapse border border-blue-500 rounded-lg overflow-hidden">
                         <thead>
-                            <tr class="bg-blue-800">
-                                <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl md:text-[1.5rem]">Post</th>
-                                <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl md:text-[1.5rem]">Price (Rs.)</th>
-                            </tr>
+                          <tr class="bg-blue-500">
+                            <th class="border border-blue-500 px-4 py-2 text-left md:text-[1.7rem]">Event</th>
+                            <th class="border border-blue-500 px-4 py-2 text-left md:text-[1.7rem]">Date</th>
+                          </tr>
                         </thead>
                         <tbody>
-                            <tr class="text-lg">
-                                <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Foreign Delegate (Online)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">5000/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Delegate from Industries/ Scientist</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">4000/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Faculty from Academic Institutions (Non - InDA Member)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">4000/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Faculty from Academic Institutions (InDA Member)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">3000/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Post Graduate / Research Scholar (Non - InDA Member)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">3000/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Post Graduate / Research Scholar (InDA Member)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1500/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">UG/Diploma Student (Non - InDA Member)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1500/-</td>
-                      </tr>
-                      <tr class="text-lg">
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">UG/Diploma Student (InDA Member)</td>
-                        <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1000/-</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission Start</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">16/06/2024</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission End</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">30/11/2024</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Announcement of Acceptance of Abstract</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">10/12/2024</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Last Date of Online Registration</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">30/12/2024</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+            </div>
+    
+            <div class="min-h-screen w-full page-6 flex flex-nowrap flex-col noise py-20 relative">
+                <!-- <div class="text-[2rem] md:text-[10vw] font-bold font-[heading1] theme-heading headingthem px-8 md:px-16 flex absolute overflow flex-nowrap top-10 ">
+                    <h1 class="flex flex-nowrap opcaity-50">Theme of <span class="font-[heading1] text-[#FF80ED] opacity-40">Conference</span></h1>
+                </div> -->
+                <div class="relative w-full h-screen text-revel flex items-center overflow-hidden">
+                    <h1 id="scrollText" class="absolute left-0 font-bold text-white whitespace-nowrap text-[18vw] font-sans">
+                      Theme of <span class="font-sans text-[#FF80ED]">Conference</span>
+                    </h1>
                 </div>
-                <p class="text-red-500 mt-6 text-center mb-7">* 5% Additional fees for SPOT registration</p>
-                <h2 class="text-center md:text-[1.4rem]">Last date for registeration is <span class="font-bold">30th December,</span> 2024</h2>
-                <h2 class="text-center md:text-[1.4rem]">All the registered participants will get the certificate</h2>
-              </div>
-            
-        </div>
-
-        <div class="h-screen w-full noise flex page-9 relative">
-                <div class="event-img h-full w-full absolute flex justify-center items-center z-[5]">
-                    <img class="bg-blue-300 h-full w-full object-cover" src="audi.jpg" alt="">
+                <div class="h-full flex w-full py-28 md:py-20">
+                    <div class="relative overflow-hidden w-full py-20 h-[100vw] md:h-[35vw] flex space-y-[20vw] md:space-y-[9.5vw]">
+                        <div id="marquee" class="absolute flex items-center text-white text-[4rem] md:text-[7vw] font-medium whitespace-nowrap">
+                          <span>Advanced Materials for Water Purification.</span>
+                          <span>Advances in Sustainable Construction Materials.</span>
+                          <span>Application of Nanotechnology in Water Purification.</span>
+                        </div>
+                        <div id="marquee1" class="absolute flex items-center text-white text-[4rem] md:text-[7vw] font-medium whitespace-nowrap">
+                            <span>Economics and Financing Aspects in Water Management.</span>
+                            <span>Materials for Energy Storage.</span>
+                            <span>Wastewater Treatment, Recovery and Reuse.</span>
+                        </div>
+                        <div id="marquee2" class="absolute flex items-center text-white text-[4rem] md:text-[7vw] font-medium whitespace-nowrap md:pt-[9.5vw] pt-[20vw]">
+                            <span>Utilization of Waste Materials in Construction.</span>
+                            <span>Water Policies and Planning.</span>
+                            <span>Water Resources Management & Sustainability.</span>
+                        </div>
+                    </div>
+                    <!-- <ul class="list-disc them-list">
+                        <li>Advanced Materials for Water Purification</li>
+                        <li>Advances in Sustainable Construction Materials</li>
+                        <li>Air and Noise Pollution</li>
+                        <li>Application of Nanotechnology in Water Purification</li>
+                        <li>Application of AI in Water Treatment and Purification</li>
+                        <li>Assessing, Monitoring, Modeling and Forecasting in Water</li>
+                        <li>Chemistry in the Energy Environment and Material Sciences</li>
+                        <li>Economics and Financing Aspects in Water Management</li>
+                        <li>Materials for Energy Storage</li>
+                        <li>Wastewater Treatment, Recovery and Reuse</li>
+                    </ul>
+                    <ul class="list-disc them-list">
+                        <li>Machine Learning and AI Applications</li>
+                        <li>Membrane and Thermal Desalination</li>
+                        <li>Nano-materials in Energy and Environment</li>
+                        <li>Nuclear/Solar/Renewal Energy Desalination</li>
+                        <li>Recent Technologies for Water/Wastewater Treatment</li>
+                        <li>Renewable and Non-renewable Energy Resource</li>
+                        <li>Utilization of Waste Materials in Construction</li>
+                        <li>Water Policies and Planning</li>
+                        <li>Water Resources Management & Sustainability</li>
+                        <li>Water to Energy Production Technologies & Water-Energy</li>
+                    </ul> -->
                 </div>
-                <div class="h-full w-full flex relative justify-center items-center md:px-16">
-                    <div class="w-full h-full flex md:flex-row flex-col items-center justify-center p-8 absolute z-[7] noise">
-                        <div class="flex md:flex-row flex-col rounded-lg h-[80%] gradient-1 w-[90%]">
-                            <div class="md:h-full h-[45%] w-full md:w-[30%]">
-                                <img 
-                                    src="loca.jpeg"
-                                    alt="Palace Arts Center"
-                                    class="rounded-lg w-full h-full object-cover"
-                                >
-                            </div>
-                            <div class="flex md:pl-16 space-y-4 md:space-y-8 noise p-8 flex items-center">
-                                <div class="space-y-6">
-                                    <p class="text-pink-500 text-[4vw] md:text-[1.2rem] font-[heading1] font-medium tracking-wider">THE VENUE</p>
-                                    
-                                    <h2 class="text-[4vw] md:text-4xl font-bold text-white tracking-wider font-[heading2]">
-                                        HARCOURT BUTLER<br>TECHNICAL UNIVERSITY
-                                    </h2>
-                                    
-                                    <p class="text-gray-200">
-                                        HBTU East Campus, Nawabganj, Kanpur, Uttar Pradesh 208002
-                                    </p>
-                                    
-                                    <div class="flex space-x-8 pt-4">
-                                        <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
-                                            <span>01. CITY GUIDE</span>
-                                            <span class="ml-2">→</span>
-                                        </a>
+            </div>
+    
+            <div class="w-full min-h-screen page-8 flex items-center noise px-8 md:px-16" id="register">
+                <div class="container mx-auto p-6">
+                    <h1 class="md:text-[4rem] text-[2rem] font-bold mb-12 font-[heading1] headingreg">REGISTRATION</h1>
+                    <div class="overflow-x-auto text-black rounded-xl bg-[#DAD9D5]">
+                        <table class="table-auto w-full border-collapse border rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-blue-800">
+                                    <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl md:text-[1.5rem]">Post</th>
+                                    <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl md:text-[1.5rem]">Price (Rs.)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-lg">
+                                    <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Foreign Delegate (Online)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">5000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Delegate from Industries/ Scientist</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">4000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Faculty from Academic Institutions (Non - InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">4000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Faculty from Academic Institutions (InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">3000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Post Graduate / Research Scholar (Non - InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">3000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Post Graduate / Research Scholar (InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1500/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">UG/Diploma Student (Non - InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1500/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">UG/Diploma Student (InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1000/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p class="text-red-500 mt-6 text-center mb-7">* 5% Additional fees for SPOT registration</p>
+                    <h2 class="text-center md:text-[1.4rem]">Last date for registeration is <span class="font-bold">30th December,</span> 2024</h2>
+                    <h2 class="text-center md:text-[1.4rem]">All the registered participants will get the certificate</h2>
+                  </div>
+                
+            </div>
+    
+            <div class="h-screen w-full noise flex page-9 relative">
+                    <div class="event-img h-full w-full absolute flex justify-center items-center z-[5]">
+                        <img class="bg-blue-300 h-full w-full object-cover" src="audi.jpg" alt="">
+                    </div>
+                    <div class="h-full w-full flex relative justify-center items-center md:px-16">
+                        <div class="w-full h-full flex md:flex-row flex-col items-center justify-center p-8 absolute z-[7] noise">
+                            <div class="flex md:flex-row flex-col rounded-lg h-[80%] gradient-1 w-[90%]">
+                                <div class="md:h-full h-[45%] w-full md:w-[30%]">
+                                    <img 
+                                        src="loca.jpeg"
+                                        alt="Palace Arts Center"
+                                        class="rounded-lg w-full h-full object-cover"
+                                    >
+                                </div>
+                                <div class="flex md:pl-16 space-y-4 md:space-y-8 noise p-8 flex items-center gradient-3">
+                                    <div class="space-y-6">
+                                        <p class="text-pink-500 text-[4vw] md:text-[1.2rem] font-[heading1] font-medium tracking-wider">THE VENUE</p>
                                         
-                                        <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
-                                            <span>02. DIRECTIONS</span>
-                                            <span class="ml-2">→</span>
-                                        </a>
+                                        <h2 class="text-[4vw] md:text-4xl font-bold text-white tracking-wider font-[heading2]">
+                                            HARCOURT BUTLER<br>TECHNICAL UNIVERSITY
+                                        </h2>
+                                        
+                                        <p class="text-gray-200">
+                                            HBTU East Campus, Nawabganj, Kanpur, Uttar Pradesh 208002
+                                        </p>
+                                        
+                                        <div class="flex space-x-8 pt-4">
+                                            <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                                <span>01. CITY GUIDE</span>
+                                                <span class="ml-2">→</span>
+                                            </a>
+                                            
+                                            <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                                <span>02. DIRECTIONS</span>
+                                                <span class="ml-2">→</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>
-
-        <div class="w-full max-h-screen flex flex-col items-center page-10 noise md:px-16 px-8">
-            <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw]">
-                <h1>Payment Mode: <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
             </div>
-            <div class="p-8 w-full flex flex-col md:text-[1.1rem] font-semibold leading-8 rounded-xl pb-[10vw] tracking-wide">
-                <h1>Bank : <span>Central Bank Of India</span></h1>
-                <h1>Branch : <span>HBTI Kanpur</span></h1>
-                <h1>A/C Name : <span>inDA-HBTU</span></h1>
-                <h1>A/C No. : <span>5307313942</span></h1>
-                <h1>IFSC : <span>CBIN0283288</span></h1>
-            </div>        
+    
+            <div class="w-full max-h-screen flex flex-col items-center page-10 noise md:px-16 px-8">
+                <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw]">
+                    <h1>Payment Mode: <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
+                </div>
+                <div class="p-8 w-full flex flex-col md:text-[1.1rem] font-semibold leading-8 rounded-xl pb-[10vw] tracking-wide">
+                    <h1>Bank : <span>Central Bank Of India</span></h1>
+                    <h1>Branch : <span>HBTI Kanpur</span></h1>
+                    <h1>A/C Name : <span>inDA-HBTU</span></h1>
+                    <h1>A/C No. : <span>5307313942</span></h1>
+                    <h1>IFSC : <span>CBIN0283288</span></h1>
+                </div>        
+            </div>
         </div>
 
-        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10">
+        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 ">
             <div class="container mx-auto py-10 md:py-20 text-center">
                 <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider">InDACON 2025</h2>
             </div>
@@ -524,8 +457,10 @@
 
     </div>
 
+    <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
