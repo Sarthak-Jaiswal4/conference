@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main bg-[#0d0d0a] text-white">
+        <div class="page-1 w-full flex flex-col min-h-screen relative gradient-1">
+            <div class="gradient-2 h-full w-full">
+                <div class="gradient-3 gradient-2 h-full w-full">
+                    <div class="noise h-full w-full px-12 relative">                       
+                        <nav class="w-full flex justify-between	h-20 py-4 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
+                            <div class="flex">
+                                <a class="font-semibold md:text-[2.5vw] text-[5vw] font-[heading1] nav" href="index.html">InDACON</a>
+                            </div>
+                            <div class="flex gap-16 items-center nav">
+                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
+                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
+                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
+                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                            </div>
+                            <div class="flex">
+                                <button class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
+                                <button class="flex flex-col justify-center space-y-1.5 p-2 group md:hidden block" onclick="menuopen()">
+                                    <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
+                                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                                    <span class="w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-5"></span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="w-full min-h-screen flex flex-col page-7 justify-center px-8 md:px-16 pb-28" id="sponser">
+                            <h1 class="text-[2rem] md:text-[4rem] font-[heading1] font-bold mb-12 mt-32 mb-12 page-headingspon">Sponsorship Categories</h1>
+                            <div class="w-full p-6 flex flex-wrap text-black justify-evenly flex-1">
+                                
+                                <!-- Platinum Sponsorship -->
+                                <div class="shadow-md text-black rounded-lg p-6 mb-10 md:w-[45%] w-full bg-[#DAD9D5] ">
+                                    <h2 class="text-2xl font-bold text-blue-600">1. Platinum Sponsorship @ Rs 5 lacs</h2>
+                                    <ul class="list-disc ml-6 mt-3">
+                                        <li>Logo on the Backdrop</li>
+                                        <li>Logo on the Entrance Gate</li>
+                                        <li>One Banner Standee at the Entrance</li>
+                                        <li>10 mins Speaker Slot</li>
+                                        <li>10 Delegate Passes</li>
+                                        <li>3x2 Display Space</li>
+                                        <li>Stall for Exhibition</li>
+                                    </ul>
+                                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                                </div>
+                        
+                                <!-- Gold Sponsorship -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full ">
+                                    <h2 class="text-2xl font-bold text-yellow-500">2. Gold Sponsorship @ Rs 3 lacs</h2>
+                                    <ul class="list-disc ml-6 mt-3">
+                                        <li>Logo on the Backdrop</li>
+                                        <li>Logo on the Entrance Gate</li>
+                                        <li>10 mins Speaker Slot</li>
+                                        <li>5 Delegate Passes</li>
+                                        <li>Stall for Exhibition</li>
+                                    </ul>
+                                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                                </div>
+                        
+                                <!-- Silver Sponsorship -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full ">
+                                    <h2 class="text-2xl font-bold text-gray-600">3. Silver Sponsorship @ Rs 1 lac</h2>
+                                    <ul class="list-disc ml-6 mt-3">
+                                        <li>Logo on the Backdrop</li>
+                                        <li>Logo on the Entrance Gate</li>
+                                        <li>3 Delegate Passes</li>
+                                        <li>Stall for Exhibition</li>
+                                    </ul>
+                                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                                </div>
+                        
+                                <!-- Bronze Sponsorship -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
+                                    <h2 class="text-2xl font-bold text-orange-400">4. Bronze Sponsorship @ Rs 50,000</h2>
+                                    <ul class="list-disc ml-6 mt-3">
+                                        <li>Logo on the Backdrop</li>
+                                        <li>Logo on the Entrance Gate</li>
+                                        <li>1 Delegate Pass</li>
+                                    </ul>
+                                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                                </div>
+                        
+                                <!-- General Sponsorship -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
+                                    <h2 class="text-2xl font-bold text-green-500">5. Sponsorship @ Rs 25,000</h2>
+                                    <ul class="list-disc ml-6 mt-3">
+                                        <li>Logo on the Backdrop</li>
+                                        <li>Logo on the Entrance Gate</li>
+                                    </ul>
+                                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                                </div>
+                        
+                                <!-- Exhibition Zone -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
+                                    <h2 class="text-2xl font-bold text-teal-500">6. Exhibition Zone</h2>
+                                    <p class="mt-3">
+                                        Industries @ Rs 25,000 (Per Exhibition stall with an area of <b>3m × 3m</b>)
+                                    </p>
+                                    <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
+                                </div>
+                        
+                                <!-- Souvenir Advertisement Rates -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
+                                    <h2 class="text-2xl font-bold text-purple-500">Souvenir Advertisement Rates</h2>
+                                    <ul class="list-disc ml-6 mt-3">
+                                        <li>Front Cover Inside Page: Rs. 40,000</li>
+                                        <li>Back Cover Page: Rs. 35,000</li>
+                                        <li>Back Inside Page: Rs. 30,000</li>
+                                        <li>Full Page Color: Rs. 15,000</li>
+                                        <li>Half Page Color: Rs. 10,000</li>
+                                        <li>Quarter Page Color: Rs. 6,500</li>
+                                        <li>Full Page B/w: Rs. 10,000</li>
+                                        <li>Half Page B/w: Rs. 7,500</li>
+                                        <li>Quarter Page B/w: Rs. 4,500</li>
+                                    </ul>
+                                </div>
+                        
+                                <!-- Publications -->
+                                <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-6">
+                                    <h2 class="text-2xl font-bold text-indigo-600">Publications</h2>
+                                    <p class="mt-3">Selected papers will be published as book chapters and in reputed international journals of Springer/Taylor & Francis. Conference proceedings will also be published.</p>
+                                    <p class="mt-3">Full papers will be invited for possible publication after peer review in the Special Issues of the following SCI/WoS-Indexed Journals:</p>
+                                    <ul class="list-decimal ml-6 mt-3">
+                                        <li>Special Issue of "Biomass Conversion and Biorefinery" (I.F: 4.05)</li>
+                                        <li>Special Issue of "Processes" (I.F: 3.5)</li>
+                                        <li>Special Issue of "Journal of Engineering" (I.F: 2.7)</li>
+                                        <li>Special Issue of "Crystals" (I.F: 2.7)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10">
+            <div class="container mx-auto py-10 md:py-20 text-center">
+                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider">InDACON 2025</h2>
+            </div>
+            <div class="container mx-auto md:py-8 px-8">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
+                    <div class="flex">
+                        <div class="flex flex-col pb-6">
+                            <p class="font-semibold pb-2">Faculty Coordinators:</p>
+                            <ul class="space-y-1">
+                                <li>Dr. S.V.A.R. Sastry, Associate Professor</li>
+                                <li>Dr. Shravan Kumar, Assistant Professor</li>
+                            </ul>
+                        </div> 
+                    </div>
+                        <!-- Address and Contact -->
+                        <div class="space-y-1 text-md">
+                            <p>School of Chemical Technology, HBTU, Kanpur, U.P.</p>
+                            <p>Pin-208002</p>
+                            <p class="font-semibold">Phone: 7093423964, 7577082588</p>
+                            <p class="flex">Email: 
+                                <a href="mailto:svarsastry@hbtu.ac.in" class="pl-2 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>, 
+                                <a href="mailto:shravan.k@hbtu.ac.in" class="pl-2 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script type="module" src="script.js"></script>
+</body>
+</html>
