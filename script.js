@@ -87,7 +87,8 @@ function sponserclk(){
         behavior:"smooth",
     })
 }
-function registerclk(){
+function registerclk(){ 
+    console.log("ork")
     register.scrollIntoView({
         behavior:"smooth",
     })
@@ -111,6 +112,9 @@ const headingspon=new SplitType(".headingspon",{
     type: "chars",
 });
 const headingreg=new SplitType(".headingreg",{
+    type: "chars",
+});
+const footerhead=new SplitType(".footerhead",{
     type: "chars",
 });
 
@@ -277,38 +281,65 @@ tl.from(headingreg.chars,{
         scrub:true,
     }
 })
+tl.from(".theme-head",{
+    opacity:0,
+    scrollTrigger:{
+        trigger:".theme-head",
+        // markers:true,
+        start:"top 50%",
+        end:"bottom 40%",
+        yoyo:true,
+        scrub:true,
+    }
+})
+tl.from(".theme-lines h1,.theme-lines div",{
+    opacity:0,
+    x:"-10px",
+    stagger:0.5,
+    scrollTrigger:{
+        trigger:".theme-lines",
+        // markers:true,
+        start:"top 90%",
+        end:"bottom 55%",
+        yoyo:true,
+        scrub:true,
+    }
+})
+tl.from(footerhead.chars,{
+    y:"10px",
+    stagger:0.05,
+    opacity:0,
+    ease: "power1.inOut",
+    duration:0.5,
+    rotateZ:3,
+    scrollTrigger:{
+        trigger:".footerhead",
+        // markers:true,
+        start:"top 75%",
+        end:"bottom 40%",
+        yoyo:true,
+        scrub:true,
+    }
+})
+tl.from(".footer",{
+    y:"50px",
+    opacity:0,
+    ease: "power1.inOut",
+    duration:0.5,
+    scrollTrigger:{
+        trigger:".footer-page",
+        // markers:true,
+        start:"top 85%",
+        end:"bottom bottom",
+        yoyo:true,
+        scrub:true,
+    }
+})
 
 document.addEventListener("DOMContentLoaded", () => {
     const marqueeSetup = (id) => {
-      const marquee = document.querySelector(`#${id}`);
-      const containerWidth = marquee.parentElement.offsetWidth;
-      const contentWidth = marquee.scrollWidth;
-
-      const clones = Math.ceil(containerWidth / contentWidth) + 1;
-      for (let i = 0; i < clones; i++) {
-        marquee.innerHTML += marquee.innerHTML;
-      }
-
-      gsap.fromTo(
-        marquee,
-        { x: -contentWidth }, // Start off-screen to the left
-        {
-          x: 0, // Animate to the original position
-          duration: 90, // Adjust speed
-          ease: "linear",
-          repeat: -1, // Infinite loop
-        }
-      );
-    };
-
-    marqueeSetup("marquee");
-    marqueeSetup("marquee2");
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const marqueeSetup = (id) => {
-      const marquee = document.querySelector(`#${id}`);
-      const containerWidth = marquee.parentElement.offsetWidth;
+      const marquee = document.querySelector(`#marquee1`);
+      const containerWidth = marquee.offsetWidth;
       const contentWidth = marquee.scrollWidth;
 
       const clones = Math.ceil(containerWidth / contentWidth) + 1;
@@ -328,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const marqueeSetup = (id) => {
       const marquee = document.querySelector(`#${id}`);
-      const containerWidth = marquee.parentElement.offsetWidth;
+      const containerWidth = marquee.offsetWidth;
       const contentWidth = marquee.scrollWidth;
 
       const clones = Math.ceil(containerWidth / contentWidth) + 1;
@@ -351,19 +382,47 @@ document.addEventListener("DOMContentLoaded", () => {
     marqueeSetup("marquee3");
   });
 
-const containerWidth = window.innerWidth;
-      gsap.fromTo(
-        "#scrollText",
-        { x: containerWidth }, // Start off-screen to the left
-        {
-          x: -containerWidth*1.8, // Move off-screen to the right
-          scrollTrigger: {
-            trigger: ".page-6", // Element to trigger the animation
-            start: "top top", // Start the animation when the top of the element hits the center of the viewport
-            end: "bottom bottom", // End the animation when the bottom of the element hits the top of the viewport
-            scrub: true, // Smooth animation tied to scroll
-            pin: true, // Pin the element while the scroll is in this range
-          },
-          ease: "linear",
-        }
-      );
+gsap.to("#liness", {
+    width: "100%",  // Animate the width to full container width
+    duration: 1.5,    // Duration in seconds
+    ease: "power1.inOut", // Smooth easing
+});
+
+const menu = document.getElementById('menu');
+const menuBtn = document.getElementById('menuBtn');
+const closebtn = document.getElementById('closebtn');
+let isOpen = false;
+
+gsap.set(menu, { 
+  yPercent: -100,
+  visibility: 'visible'
+});
+menuBtn.addEventListener('click', () => {
+//   isOpen = !isOpen;
+  gsap.to(menu, {
+    yPercent:0,
+    duration: 0.5,
+    ease: 'power2.inOut'
+  });
+//   gsap.from(".menu-head",{
+//     y:"+40px",
+//     stagger:0.05,
+//     scrub:true,
+//     duration: 1,
+//   })
+});
+closebtn.addEventListener("click",function(){
+    // gsap.to(".menu-head",{
+    //     y:"+40px",
+    //     stagger:0.05,
+    //     scrub:true,
+    //     duration: 1,
+    // })
+    gsap.to(menu, {
+      yPercent: -100,
+      duration: 0.2,
+      ease: 'power2.inOut',
+      delay:0.5,
+    });
+})
+
