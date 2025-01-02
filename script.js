@@ -50,14 +50,23 @@ window.addEventListener("touchmove",function(e){
     if(page1.getBoundingClientRect().bottom>0 && start<previous){
         bar.classList.remove("going-up")
         bar.classList.remove("going-down")
+        gsap.to("nav",{
+            y:"0px"
+        })
     }
     else if(start>previous){
         bar.classList.remove("going-up")
         bar.classList.add("going-down")
+        gsap.to("nav",{
+            y:"-100px"
+        })
     }
     else{
         bar.classList.remove("going-down")
         bar.classList.add("going-up")
+        gsap.to("nav",{
+            y:"0px"
+        })
     }
 })
 
@@ -385,6 +394,7 @@ gsap.to("#liness", {
     width: "100%",  // Animate the width to full container width
     duration: 1.5,    // Duration in seconds
     ease: "power1.inOut", // Smooth easing
+    // marlers:true
 });
 
 const menu = document.getElementById('menu');
