@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+         .bg-texture {
+            background-color: #f5f5dc;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
         /* Custom grain texture style */
         .grain-bg {
             background-color: #0A0470; /* Base color */
@@ -33,9 +37,9 @@
             height: 130%;
             border: 2px solid #ff80ed;
             border-radius: 50%;
-            -webkit-transform: rotate(-7deg);
-            -ms-transform: rotate(-7deg);
-            transform: rotate(-8deg)
+            -webkit-transform: rotate(-6deg);
+            -ms-transform: rotate(-6deg);
+            transform: rotate(-6deg)
         }
         .bur-line {
       transition: transform 0.3s ease, opacity 0.3s ease;
@@ -56,7 +60,7 @@
         <div  class="sidemenu bg-black h-full w-full">
                 
                 <nav id="menu" class="fixed top-0 left-0 w-full h-screen bg-black shadow-lg z-[9999]">
-                   <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON</div>
+                   <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON'25</div>
                    <button id="closebtn" class="fixed top-4 right-4 p-2 z-[99999] rounded-lg">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4L20 20" stroke-linecap="round"></path>
@@ -98,10 +102,10 @@
             <div class="page-1 w-full flex flex-col h-screen relative gradient-1">
                 <div class="gradient-2 h-full w-full">
                     <div class="gradient-3 gradient-2 h-full w-full">
-                        <div class="noise h-full w-full px-12 relative">                       
-                            <nav class="w-full flex justify-between	h-20 py-4 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
+                        <div class="noise h-full w-full px-[3vw] md:px-12 relative">                       
+                            <nav class="w-full flex justify-between	h-20 py-12 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
                                 <div class="flex">
-                                    <a class="font-semibold md:text-[2.5vw] text-[6vw] leading-[30px] font-[heading1] nav" href="index.html">InDACON</a>
+                                    <a class="font-semibold md:text-[2rem] text-[6vw] leading-[30px] font-[heading1] nav" href="index.html">InDACON'25</a>
                                 </div>
                                 <div class="flex gap-16 items-center nav">
                                     <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
@@ -111,7 +115,7 @@
                                     <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
                                 </div>
                                 <div class="flex">
-                                    <button class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
+                                    <a class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
                                     <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
                                         <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                           <path d="M4 6h16M4 12h16M4 18h16"></path>
@@ -119,31 +123,34 @@
                                     </button>
                                 </div>
                             </nav>
-                            <div class="w-full h-[95%] flex justify-center items-center text-[9vw] md:text-[5.5vw] flex-col leading-[8vw] md:leading-[3.5vw] font-[700] tracking-tight relative mb-5 font-[heading2] overflow-hidden">
+                            <div class="w-full h-[65%] flex justify-end items-center text-[9vw] md:text-[5.5vw] flex-col leading-[8vw] md:leading-[3.5vw] font-[700] tracking-tight relative mb-5 font-[heading2] overflow-hidden">
                                 <h1 class="font-serif md:text-[2.5vw] text-[1.7rem] pb-16 font-medium tracking-wide">February 20th-22th</h1>
-                                <div class="flex flex-col gap-[1.5rem] md:flex-row text-center tracking-tight pb-1 flex-col text-[2rem] md:text-[4.5vw]">
+                                <div class="flex flex-col gap-[1.5rem] md:flex-row text-center tracking-tight pb-1 flex-col text-[8.2vw] md:text-[4.5vw]">
                                     <h1 class="hero-para">INTERNATIONAL</h1>
                                     <h1 class="hero-para">CONFERENCE</h1>
                                 </div>
                                 <br>
                                 <h1 class="text-[1.7rem] md:text-[4.5vw] hero-para">InDACON - 2025</h1>
-                                <button class="register-btn text-[1.2rem] md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] rounded-full text-[#0A0470] absolute bottom-[5%] bg-gradient-to-r from-[#FF84E0] tracking-normal to-[#FEC35A]  hover:outine" onclick="registerclk()">Register For Conference</button>
+                            </div>
+                            <div class="h-[35%] w-full relative flex flex-col gap-4 md:gap-10 pt-10 md:flex-row justify-center items-center">
+                                <a class="register-btn text-[1rem] text-center md:right-[12%] md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] text-white bg-[#2D01F6] tracking-normal rounded-md hover:bg-[#7456FF]" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register For Conference</a>
+                                <a class="register-btn text-[1rem] md:left-[12%] text-center  md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] text-white bg-[#DD197F] tracking-normal hover:bg-[#F846A3] hover:pointer rounded-md" href=" https://docs.google.com/forms/d/e/1FAIpQLSe_RaORmftL08aAWsj6JHpHM-_O3zmQlP3Fw89OXlOlX_9WYg/viewform">Abstract  Submission Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     
-            <div class="md:h-auto h-full m-0 w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif tracking-[4px] md:leading-[7.1rem] noise gradient-3 relative">
-                <div class="gradient-2-2 px-7 md:px-8">
-                    <div class="w-full h-full mt-52 mb-40 md:px-[130px] quote-cont">
-                        <h1 class="quote">“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & <span class="relative font-[hello] text-[9vw] md:text-[8vw]"> Enviromental <strong class="circle"></strong></span> conservation "</h1>
+            <div class="md:h-auto h-full w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif md:leading-[6rem] noise gradient-3 relative">
+                <div class="gradient-2-2 px-6 md:px-8">
+                    <div class="w-full h-full mt-52 mb-40 md:px-[40px] quote-cont">
+                        <h1 class="quote font-[quotefont]">“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & <span class="relative font-[quotefont] "> Enviromental <strong class="circle"></strong></span> conservation "</h1>
                     </div>
     
                 </div>
             </div>
             <div class="page-3 w-full h-auto flex gap-5 md:gap-12 flex-col md:flex-row noise px-8 md:px-16">
-                <div class=" text-[2rem] font-bold mt-[8vw] md:my-[10vw] md:w-full md:text-[4rem] leading-[1.35em] font-[heading1] about">About the <span class="font-[heading1] text-[#FF80ED]">Conference</span></div>
+                <div class=" text-[9vw] font-bold mt-[8vw] md:my-[10vw] md:w-full md:text-[4rem] leading-[1.35em] font-[heading1] about">About the <span class="font-[heading1] text-[#FF80ED]">Conference</span></div>
                 <div class="flex flex-col gap-10 md:text-[1.2rem] mt-[8vw] leading-9 md:w-full mb-[10vw] ">
                     <h2 class="about-para">This International Conference, organized by the Departments of Chemical and Biochemical Engineering at Harcourt Butler Technical University (HBTU) in collaboration with the Indian Desalination Association (InDA), will focus on trends in desalination, water, energy, and the environment. Key topics include wastewater treatment, water resource management, purification methods, and waste management.</h2>
                     <h2 class="about-para">Experts will share insights on advanced material synthesis and its applications in tackling challenges in desalination, energy, and environmental sustainability. Technical sessions will highlight innovative technologies and strategies to address these pressing global issues effectively.
@@ -156,21 +163,6 @@
                 <div class="h-full w-full md:mb-16">
                     <div class="speaker-heading relative">
                         <h1 class="font-[heading1] text-[2rem] md:text-[4rem] font-bold tracking-wider pb-12 font-semibold underline decoration-2 underline-offset-[12px] speakheading">Speakers</h1>
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="absolute top-[5%]">
-                            <path 
-                            d="M 0,10 
-                                L 85,10 
-                                Q 100,10 99,19
-                                L 99,45
-                                Q 99,50 94,50
-                                L 80,50"
-                            stroke="white" 
-                            stroke-width="1"
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                            fill="none"
-                          />
-                          </svg> -->
                     </div>
         
                     <div class="w-full h-full flex flex-wrap flex-col md:flex-row justify-between pb-12 md:pb-16 collage">
@@ -229,11 +221,11 @@
                         <a class="font-[heading2] underline md:hover:underline underline-offset-8 hover:text-[1.4rem] duration-300 cursor-pointer ease-in-out" href="speaker.html">All Speakers</a>
                     </div>
                 </div>
-            </div>
+            </div> 
     
-            <div class="page-5 w-full max-h-screen flex items-center noise px-8 md:px-16" id="schedule">
+             <div class="page-5 w-full max-h-screen flex items-center noise px-8 md:px-16" id="schedule">
                 <div class="w-full text-white rounded-lg px-6 md:mt-[6vw] mt-36 mb-36 ">
-                    <h2 class="text-[2rem] md:text-[4rem] font-[heading1] font-bold tracking-wider mb-12 imp-heading headingimp">Important Dates</h2>
+                    <h2 class="text-[7.9vw] md:text-[4rem] font-[heading1] font-bold tracking-wider mb-12 imp-heading headingimp">Important Dates</h2>
                     <table class="table-auto w-full border-collapse border border-blue-500 rounded-lg overflow-hidden">
                         <thead>
                           <tr class="bg-blue-500">
@@ -261,11 +253,11 @@
                         </tbody>
                       </table>
                   </div>
-            </div>
+            </div> 
     
             <div class="min-h-screen w-full page-6 flex flex-nowrap flex-col noise px-8 md:px-16">
                 <div class="relative w-full h-full text-revel flex items-center overflow-hidden">
-                    <h1 id="theme-head" class="theme-head font-bold text-white text-[2rem] md:text-[4rem] font-[heading2] w-[60%]">
+                    <h1 id="theme-head" class="theme-head font-bold text-white text-[9vw] md:text-[4rem] font-[heading2] w-[60%]">
                         Empowering Ideas, Shaping Futures: <span class="font-[heading2] text-[#FF80ED]"> The Conference Revolution</span>
                     </h1>
                 </div>
@@ -302,22 +294,12 @@
                             <div id="liness" class="theme-line h-[2px]"></div>
                             </div>
                     </div>
-                    <!-- <ul class="list-disc them-list">
-                        <li>Machine Learning and AI Applications</li>
-                        <li>Nano-materials in Energy and Environment</li>
-                        <li>Nuclear/Solar/Renewal Energy Desalination</li>
-                        <li>Recent Technologies for Water/Wastewater Treatment</li>
-                        <li>Renewable and Non-renewable Energy Resource</li>
-                        <li>Utilization of Waste Materials in Construction</li>
-                        <li>Water Resources Management & Sustainability</li>
-                        <li>Water to Energy Production Technologies & Water-Energy</li>
-                    </ul> -->
                 </div>
             </div>
     
             <div class="w-full min-h-screen page-8 flex items-center noise px-8 md:px-16" id="register" name="register">
-                <div class="container mx-auto p-6">
-                    <h1 class="md:text-[4rem] text-[1.9rem] font-bold mb-12 font-[heading1] headingreg">REGISTRATION</h1>
+                <div class="container p-6">
+                    <h1 class="md:text-[4rem] text-[6.5vw] font-bold mb-12 font-[heading1] headingreg">REGISTRATION</h1>
                     <div class="overflow-x-auto text-black rounded-xl bg-[#DAD9D5]">
                         <table class="table-auto w-full border-collapse border rounded-xl overflow-hidden">
                             <thead>
@@ -368,15 +350,54 @@
                   </div>
                 
             </div>
+
+            <div class="w-full h-auto page-9 flex items-center noise px-8 md:px-16">
+                <div class="w-full pb-36 pt-20">
+                    <h1 class="md:text-[4rem] text-[6.5vw] font-bold mb-12 font-[heading1] mb-12">
+                        INDA REGISTRATION FLOWCHART
+                    </h1>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                        <div class="bg-white border-4 rounded-xl p-6 w-full md:w-1/3">
+                            <h2 class="text-2xl font-bold text-center mb-4 text-[#DD197F]">ABSTRACT SUBMISSION</h2>
+                        </div>
+                        <div class="hidden md:block">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="flex justify-center my-8 block md:hidden">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="rounded-xl bg-white p-6 w-full md:w-1/3">
+                            <h2 class="text-2xl font-bold text-center mb-4 text-[#DD197F]">ABSTRACT ACCEPTANCE</h2>
+                        </div>
+                        <div class="hidden md:block">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="flex justify-center my-8 block md:hidden">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="rounded-xl bg-white p-6 mx-auto w-full md:w-1/3">
+                            <h2 class="text-2xl font-bold text-center mb-4 text-[#DD197F]">REGISTRATION & PAYMENT</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
-            <div class="h-screen w-full noise flex page-9 relative">
+            <div class="h-screen w-full noise flex page-10 relative">
                     <div class="event-img h-full w-full absolute flex justify-center items-center z-[5]">
                         <img class="bg-blue-300 h-full w-full object-cover" src="audi.jpg" alt="">
                     </div>
-                    <div class="h-full w-full flex relative justify-center items-center md:px-16">
+                    <div class="h-screen md:h-full w-full flex relative justify-center items-center md:px-16">
                         <div class="w-full h-full flex md:flex-row flex-col items-center justify-center p-8 absolute z-[7] noise">
-                            <div class="flex md:flex-row flex-col rounded-lg h-[80%] gradient-1 w-[90%]">
-                                <div class="md:h-full h-[45%] w-full md:w-[30%]">
+                            <div class="flex md:flex-row flex-col rounded-lg md:h-[80%] h-[95%] gradient-1 w-[90%]">
+                                <div class="md:h-full h-[40%] w-full md:w-[30%]">
                                     <img 
                                         src="loca.jpeg"
                                         alt="Palace Arts Center"
@@ -396,12 +417,12 @@
                                         </p>
                                         
                                         <div class="flex space-x-8 pt-4">
-                                            <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                            <a href="https://www.google.com/maps/place/Kanpur+Nagar,+Uttar+Pradesh/@26.3431431,80.2277943,11z/data=!4m6!3m5!1s0x399c47831a987bf3:0x53df4d42cef9f8d6!8m2!3d26.4148245!4d80.2321313!16zL20vMDgwa25k?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
                                                 <span>01. CITY GUIDE</span>
                                                 <span class="ml-2">→</span>
                                             </a>
                                             
-                                            <a href="#" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                            <a href="https://www.google.com/maps/dir//F8V4%2B3XW+HBTU+East+Campus,+HBTU,+HBIT+East+Campus,+Nawabganj,+Kanpur,+Uttar+Pradesh+208002/@26.4926941,80.3063209,17.56z/data=!4m9!4m8!1m0!1m5!1m1!1s0x399c384055555551:0xd01b36f50ed65188!2m2!1d80.3074438!2d26.4927312!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
                                                 <span>02. DIRECTIONS</span>
                                                 <span class="ml-2">→</span>
                                             </a>
@@ -413,7 +434,7 @@
                     </div>
             </div>
     
-            <div class="w-full max-h-screen flex flex-col items-center page-10 noise md:px-16 px-8">
+            <div class="w-full max-h-screen flex flex-col items-center page-11 noise md:px-16 px-8">
                 <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw] footerhead">
                     <h1>Payment Mode: <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
                 </div>
@@ -428,11 +449,11 @@
         </div>
 
         <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 footer-page">
-            <div class="container mx-auto py-10 md:py-20 text-center">
+            <div class="container py-10 md:py-20 text-center">
                 <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer">InDACON 2025</h2>
             </div>
-            <div class="container mx-auto md:py-8 px-8">
-                <div class="max-w-4xl mx-auto footer">
+            <div class="container md:py-8 px-8">
+                <div class="max-w-4xl footer">
                     <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
                     <div class="flex">
                         <div class="flex flex-col pb-6">
@@ -443,14 +464,13 @@
                             </ul>
                         </div> 
                     </div>
-                        <!-- Address and Contact -->
-                        <div class="space-y-1 text-md">
+                        <div class="space-y-1">
                             <p>School of Chemical Technology, HBTU, Kanpur, U.P.</p>
                             <p>Pin-208002</p>
                             <p class="font-semibold">Phone: 7093423964, 7577082588</p>
-                            <p class="flex">Email: 
-                                <a href="mailto:svarsastry@hbtu.ac.in" class="pl-2 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>, 
-                                <a href="mailto:shravan.k@hbtu.ac.in" class="pl-2 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
+                            <p class="flex flex-col">Email: 
+                                <a href="mailto:svarsastry@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>
+                                <a href="mailto:shravan.k@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
                             </p>
                         </div>
                 </div>
