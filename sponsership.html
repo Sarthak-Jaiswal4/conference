@@ -58,13 +58,14 @@
                                 <a class="font-semibold md:text-[2.5vw] text-[6vw] leading-[30px] font-[heading1] nav" href="index.html">InDACON</a>
                             </div>
                             <div class="flex gap-16 items-center nav">
+                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
                                 <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
                                 <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
                                 <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
                                 <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
                             </div>
                             <div class="flex">
-                                <button class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
+                                <button class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-[#DD197F] font-medium hover:bg-white hover:text-black duration-300" onclick="registerclk()">Register</button>
                                 <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
                                     <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                       <path d="M4 6h16M4 12h16M4 18h16"></path>
@@ -72,11 +73,219 @@
                                 </button>
                             </div>
                         </nav>
-                        <div class="w-full min-h-screen flex flex-col page-7 justify-center px-8 md:px-16 pb-28" id="sponser">
-                            <h1 class="text-[2rem] md:text-[4rem] font-[heading1] font-bold mb-12 mt-32 mb-12 page-headingspon">Sponsorship Categories</h1>
-                            <div class="w-full p-6 flex flex-wrap text-black justify-evenly flex-1">
+                        <div class="w-full min-h-screen flex flex-col page-7 justify-center items-center px-2 md:px-16 pb-28" id="sponser">
+                            <div class="w-full h-full font-[heading2] mt-52 text-center text-[1.7rem] flex flex-col gap-20">
+                                <h1>Sponser</h1>
+                                <p class="text-[#DD197F] md:px-[4.5vw] text-[1.6rem] md:text-[3.2vw] tracking-wide md:leading-[4vw] leading-[2rem]">Gain valuable exposure for your brand and help us ensure the success of our Conference by becoming a sponsor or exhibitor!</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white text-black min-h-screen w-full pt-1 flex flex-col pb-20 gap-10 rounded-xl px-6">
+                            <h1 class="text-[1.8rem] md:text-[3.8rem] font-[heading1] font-bold mb-12 mt-32 mb-12 text-[#DD197F] page-headingspon text-center">Sponsorship Levels</h1>
+                            <h1 class="text-center font-normal text-[1.3rem] tracking-wider font-[heading1]">Choose a Package</h1>
+
+                            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <!-- Technology Partner -->
+                                <div class="bg-[#DD197F] rounded-lg p-6 flex flex-col shadow-lg">
+                                    <h2 class="text-xl md:text-2xl font-bold text-black text-center mb-4">Platinum</h2>
+                                    <div class="text-2xl md:text-3xl font-bold text-white text-center mb-6 py-2 border-y-[1.5px] border-black">
+                                        ₹5,00,000
+                                    </div>
+                                    <ul class="text-white space-y-2 flex-grow text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Backdrop</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Entrance Gate</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>One Banner Standee at the Entrance</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>10 mins Speaker Slot</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>10 Delegate Passes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>3x2 Display Space</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Stall for Exhibition</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
+                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                        GET STARTED
+                                    </button>
+                                </div>
+                                <div class="bg-[#DD197F] rounded-lg p-6 flex flex-col shadow-lg">
+                                    <h2 class="text-xl md:text-2xl font-bold  text-black text-center mb-4">Gold</h2>
+                                    <div class="text-2xl md:text-3xl font-bold text-white text-center mb-6 border-y-[1.5px] border-black py-2">
+                                        ₹3,00,000
+                                    </div>
+                                    <ul class="text-white space-y-2 flex-grow text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Backdrop</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Entrance Gate</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>10 mins Speaker Slot</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>5 Delegate Passes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Stall for Exhibition</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
+                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                        GET STARTED
+                                    </button>
+                                </div>
+                        
+                                <!-- Platinum -->
+                                <div class="bg-[#DD197F] rounded-lg p-6 flex flex-col shadow-lg">
+                                    <h2 class="text-xl md:text-2xl font-bold  text-black text-center mb-4">Silver</h2>
+                                    <div class="text-2xl md:text-3xl font-bold text-white text-center mb-6 py-2 border-y-[1.5px] border-black">
+                                        ₹1,00,000
+                                    </div>
+                                    <ul class="text-white space-y-2 flex-grow text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Backdrop</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Entrance Gate</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>One Banner Standee at the Entrance</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>10 mins Speaker Slot</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>10 Delegate Passes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>3x2 Display Space</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Stall for Exhibition</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
+                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                        GET STARTED
+                                    </button>
+                                </div>
+                        
+                                <!-- Gold -->
+                                <div class="bg-[#DD197F] rounded-lg p-6 flex flex-col shadow-lg">
+                                    <h2 class="text-xl md:text-2xl font-bold  text-black text-center mb-4">Bronze</h2>
+                                    <div class="text-2xl md:text-3xl font-bold text-white text-center mb-6 py-2 border-y-[1.5px] border-black">
+                                        ₹50,000
+                                    </div>
+                                    <ul class="text-white space-y-2 flex-grow text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Backdrop</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Entrance Gate</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>10 mins Speaker Slot</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>5 Delegate Passes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Stall for Exhibition</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
+                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                        GET STARTED
+                                    </button>
+                                </div>
+                        
+                                <!-- Silver -->
+                                <div class="bg-[#DD197F] rounded-lg p-6 flex flex-col shadow-lg">
+                                    <h2 class="text-xl md:text-2xl font-bold  text-black text-center mb-4">sponsership</h2>
+                                    <div class="text-2xl md:text-3xl font-bold text-white text-center mb-6 py-2 border-y-[1.5px] border-black">
+                                        ₹25,000
+                                    </div>
+                                    <ul class="text-white space-y-2 flex-grow text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Backdrop</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Logo on the Entrance Gate</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>3 Delegate Passes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Stall for Exhibition</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
+                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                        GET STARTED
+                                    </button>
+                                </div>
+                        
+                                <!-- Bronze -->
+                                <div class="bg-[#DD197F] rounded-lg p-6 flex flex-col shadow-lg">
+                                    <h2 class="text-xl md:text-2xl font-bold  text-black text-center mb-4">Exhibition</h2>
+                                    <div class="text-2xl md:text-3xl font-bold text-white text-center mb-6 py-2 border-y-[1.5px] border-black">
+                                        ₹25,000
+                                    </div>
+                                    <ul class="text-white space-y-2 flex-grow text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">✓</span>
+                                            <span>Exhibition zone will be provided for
+                                                industries  Rs 25,000 (Per Exhibition
+                                                stall with an area of 3m × 3m)</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
+                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                        GET STARTED
+                                    </button>
+                                </div>
+                            <!-- <div class="w-full p-6 flex flex-wrap text-black justify-evenly flex-1">
                                 
-                                <!-- Platinum Sponsorship -->
                                 <div class="shadow-md text-black rounded-lg p-6 mb-10 md:w-[45%] w-full bg-[#DAD9D5] ">
                                     <h2 class="text-2xl font-bold text-blue-600">1. Platinum Sponsorship @ Rs 5 lacs</h2>
                                     <ul class="list-disc ml-6 mt-3">
@@ -89,9 +298,8 @@
                                         <li>Stall for Exhibition</li>
                                     </ul>
                                     <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                                </div>
-                        
-                                <!-- Gold Sponsorship -->
+                                </div>                       
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full ">
                                     <h2 class="text-2xl font-bold text-yellow-500">2. Gold Sponsorship @ Rs 3 lacs</h2>
                                     <ul class="list-disc ml-6 mt-3">
@@ -102,9 +310,8 @@
                                         <li>Stall for Exhibition</li>
                                     </ul>
                                     <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                                </div>
-                        
-                                <!-- Silver Sponsorship -->
+                                </div>               
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full ">
                                     <h2 class="text-2xl font-bold text-gray-600">3. Silver Sponsorship @ Rs 1 lac</h2>
                                     <ul class="list-disc ml-6 mt-3">
@@ -114,9 +321,8 @@
                                         <li>Stall for Exhibition</li>
                                     </ul>
                                     <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                                </div>
-                        
-                                <!-- Bronze Sponsorship -->
+                                </div>                       
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
                                     <h2 class="text-2xl font-bold text-orange-400">4. Bronze Sponsorship @ Rs 50,000</h2>
                                     <ul class="list-disc ml-6 mt-3">
@@ -125,9 +331,8 @@
                                         <li>1 Delegate Pass</li>
                                     </ul>
                                     <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                                </div>
-                        
-                                <!-- General Sponsorship -->
+                                </div>                       
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
                                     <h2 class="text-2xl font-bold text-green-500">5. Sponsorship @ Rs 25,000</h2>
                                     <ul class="list-disc ml-6 mt-3">
@@ -135,9 +340,8 @@
                                         <li>Logo on the Entrance Gate</li>
                                     </ul>
                                     <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
-                                </div>
-                        
-                                <!-- Exhibition Zone -->
+                                </div>                        
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
                                     <h2 class="text-2xl font-bold text-teal-500">6. Exhibition Zone</h2>
                                     <p class="mt-3">
@@ -145,8 +349,7 @@
                                     </p>
                                     <p class="mt-3 text-sm text-gray-500">Plus 18% GST Applicable on above.</p>
                                 </div>
-                        
-                                <!-- Souvenir Advertisement Rates -->
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-10 md:w-[45%] w-full">
                                     <h2 class="text-2xl font-bold text-purple-500">Souvenir Advertisement Rates</h2>
                                     <ul class="list-disc ml-6 mt-3">
@@ -160,9 +363,8 @@
                                         <li>Half Page B/w: Rs. 7,500</li>
                                         <li>Quarter Page B/w: Rs. 4,500</li>
                                     </ul>
-                                </div>
-                        
-                                <!-- Publications -->
+                                </div>                 
+
                                 <div class="bg-[#DAD9D5] shadow-md rounded-lg p-6 mb-6">
                                     <h2 class="text-2xl font-bold text-indigo-600">Publications</h2>
                                     <p class="mt-3">Selected papers will be published as book chapters and in reputed international journals of Springer/Taylor & Francis. Conference proceedings will also be published.</p>
@@ -173,19 +375,20 @@
                                         <li>Special Issue of "Journal of Engineering" (I.F: 2.7)</li>
                                         <li>Special Issue of "Crystals" (I.F: 2.7)</li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10">
+        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 footer-page">
             <div class="container mx-auto py-10 md:py-20 text-center">
-                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider">InDACON 2025</h2>
+                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer">InDACON 2025</h2>
             </div>
             <div class="container mx-auto md:py-8 px-8">
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-4xl mx-auto footer">
                     <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
                     <div class="flex">
                         <div class="flex flex-col pb-6">
