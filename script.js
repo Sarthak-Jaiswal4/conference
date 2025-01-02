@@ -148,11 +148,10 @@ tl.from(text.lines,{
     scrollTrigger:{
         trigger:".quote-cont",
         // markers:true,
-        start:"top 75%",
-        end:"bottom 80%",
+        start:"top 65%",
+        end:"bottom 60%",
         yoyo:true,
         scrub:true,
-        // markers:true,
     }
 })
 tl.from(abouttext.chars,{
@@ -322,14 +321,14 @@ tl.from(footerhead.chars,{
     }
 })
 tl.from(".footer",{
-    y:"50px",
+    y:"100px",
     opacity:0,
     ease: "power1.inOut",
-    duration:0.5,
+    duration:1,
     scrollTrigger:{
         trigger:".footer-page",
         // markers:true,
-        start:"top 85%",
+        start:"top 70%",
         end:"bottom bottom",
         yoyo:true,
         scrub:true,
@@ -420,9 +419,9 @@ closebtn.addEventListener("click",function(){
     // })
     gsap.to(menu, {
       yPercent: -100,
-      duration: 0.2,
+      duration: 0.5,
       ease: 'power2.inOut',
-      delay:0.5,
+    //   delay:0.5,
     });
 })
 
