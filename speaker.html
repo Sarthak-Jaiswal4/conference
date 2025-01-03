@@ -8,47 +8,51 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div  class="sidemenu bg-black h-full text-white w-full">
+    <div class="main w-full h-full bg-[#0d0d0a] text-white relative">
+        <div  class="sidemenu bg-black h-full w-full">
                 
-        <nav id="menu" class="fixed top-0 left-0 w-full h-screen bg-black shadow-lg z-[9999]">
-           <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON'25</div>
-           <button id="closebtn" class="fixed top-4 right-4 p-2 z-[99999] rounded-lg">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4L20 20" stroke-linecap="round"></path>
-                <path d="M20 4L4 20" stroke-linecap="round"></path>
-              </svg>
-            </button>
-            <div class="px-16 mt-16 overflow-hidden flex flex-col gap-8">
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
-           </div>
-           <div class="flex space-x-6 mb-8 pt-24 px-8"> 
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-            </a>
+                <nav id="menu" class="fixed top-0 left-0 w-full h-screen bg-black shadow-lg z-[9999]">
+                   <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON'25</div>
+                   <button id="closebtn" class="fixed top-4 right-4 p-2 z-[99999] rounded-lg">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4L20 20" stroke-linecap="round"></path>
+                        <path d="M20 4L4 20" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <div class="px-16 mt-16 overflow-hidden flex flex-col gap-8">
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                   </div>
+                   <div class="flex space-x-6 mb-8 pt-24 px-8"> 
+                        <a href="https://www.instagram.com/iiche_hbtu?igsh=bzh1MWpyNXZmbzBt" class="text-white hover:text-gray-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/iiche-student-chapter-hbtu/" class="text-white hover:text-gray-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <!-- <a href="#" class="text-white hover:text-gray-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a> -->
+                        <a href="https://www.youtube.com/@iicheschbtu" class="text-white hover:text-gray-300">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6">
+                                <path 
+                                fill="#FFFFFF" 
+                                d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.9 3.6 12 3.6 12 3.6s-7.9 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 7.8 0 12 0 12s0 4.2.5 5.8c.3 1 1 1.8 2 2.1 1.6.5 9.5.5 9.5.5s7.9 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.6.5-5.8.5-5.8s0-4.2-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
         </div>
-        </nav>
-</div>
     <div class="main h-full w-full bg-[#0d0d0a] text-white">
         <div class="page-1 w-full flex flex-col min-h-screen relative gradient-1">
             <div class="gradient-2 h-full w-full">
@@ -65,19 +69,19 @@
                                     <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
                                     <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
                             </div>
-                           <div class="flex">
-                                    <a class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
-                                    <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
-                                        <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                          <path d="M4 6h16M4 12h16M4 18h16"></path>
-                                        </svg>
-                                    </button>
-                                </div>
+                            <div class="flex">
+                                <a class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
+                                <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
+                                    <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                      <path d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </nav>
                         <div class="h-full w-full pt-52 flex flex-col gap-[4rem] md:gap-[7rem]">
                             <div class="heading h-full flex w-full justify-center px-[6vw] gap-[4rem] md:gap-[12rem] md:flex-row flex-col ">
                                 <h1 class="text-[8.5vw] md:text-[3rem] font-bold tracking-wider font-[heading1] text-center">SPEAKERS</h1>
-                                <p class="leading-8 font-medium tracking-wide text-[1.1rem] md:text-left text-center">IDACON brings together global leaders in chemical engineering to showcase breakthrough desalination and energy conservation solutions. Leading experts will present cutting-edge water purification strategies and sustainable technologies. Connect with pioneers advancing clean water innovation and discover transformative approaches to water security and energy efficiency.</p>
+                                <p class="leading-8 font-medium tracking-wide text-[1.1rem] md:text-left text-center">InDACON'25 brings together global leaders in chemical engineering to showcase breakthrough desalination and energy conservation solutions. Leading experts will present cutting-edge water purification strategies and sustainable technologies. Connect with pioneers advancing clean water innovation and discover transformative approaches to water security and energy efficiency.</p>
                             </div>
                             <div class="w-full h-full px-[3vw] md:px-12 md:px-20 flex flex-wrap">
                                 <div class="rounded-2xl w-full py-12 h-auto basis-1/1 md:basis-1/3 speaker-photo">
@@ -180,6 +184,107 @@
                                         <h1 class="tracking-wide">Canada</h1>
                                     </div>
                                 </div>
+
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/veera boddu.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Dr. Veera M Boddu</h1>
+                                        <h1 class="tracking-wide">Environmental Protection Agency</h1>
+                                        <h1 class="tracking-wide">US</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/pillla.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Dr. Srikanth Pilla</h1>
+                                        <h1 class="tracking-wide">University of Arkanas</h1>
+                                        <h1 class="tracking-wide">US</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/Ranil.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. Ranil Wickramasinghe</h1>
+                                        <h1 class="tracking-wide">University of Arkanas</h1>
+                                        <h1 class="tracking-wide">US</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/kkpant.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. K. K. Pant</h1>
+                                        <h1 class="tracking-wide">IIT Roorkee</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/sinha.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. Shishir Sinha</h1>
+                                        <h1 class="tracking-wide">IIT Roorkee</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/mondal.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. Prasenjit Mandal</h1>
+                                        <h1 class="tracking-wide">IIT Roorkee</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/anil verma.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. Anil Verma</h1>
+                                        <h1 class="tracking-wide">IIT Delhi</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/bishnupada.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. Bishnupada Mandal</h1>
+                                        <h1 class="tracking-wide">IIT Guwahati</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/s s senthimurugan.jpg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. S Senthilmurugan</h1>
+                                        <h1 class="tracking-wide">IIT Guwahati</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl py-12 w-full basis-1/1 md:basis-1/3 speaker-photo">
+                                    <div class="w-full flex justify-center items-center pb-6">
+                                        <img class="md:w-[12vw] w-[10rem] h-[15rem] md:h-[16vw] object-cover rounded-lg" src="speakers/bk dubey.jpeg" alt="">
+                                    </div>
+                                    <div class="w-full flex justify-center flex-col items-center leading-6 text-[1.1rem] md:text-xl">
+                                        <h1 class="font-medium mb-[8px]">Prof. B.K Dubey</h1>
+                                        <h1 class="tracking-wide">IIT Kharagpur</h1>
+                                        <h1 class="tracking-wide">Indian</h1>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,36 +297,70 @@
                             <span> Embodying a rich variety of global perspectives. </span>
                         </div>
                     </div>
+                   
             </div>
         </div>
-        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 footer-page">
-            <div class="container py-10 md:py-20 text-center">
-                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer">InDACON'25</h2>
-            </div>
-            <div class="container md:py-8 px-8">
-                <div class="max-w-4xl footer">
-                    <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
-                    <div class="flex">
-                        <div class="flex flex-col pb-6">
-                            <p class="font-semibold pb-2">Faculty Coordinators:</p>
-                            <ul class="space-y-1">
-                                <li>Dr. S.V.A.R. Sastry, Associate Professor</li>
-                                <li>Dr. Shravan Kumar, Assistant Professor</li>
-                            </ul>
-                        </div> 
-                    </div>
-                        <div class="space-y-1">
-                            <p>School of Chemical Technology, HBTU, Kanpur, U.P.</p>
-                            <p>Pin-208002</p>
-                            <p class="font-semibold">Phone: 7093423964, 7577082588</p>
-                            <p class="flex flex-col">Email: 
-                                <a href="mailto:svarsastry@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>
-                                <a href="mailto:shravan.k@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
-                            </p>
+        <footer class="h-auto w-full flex flex-col  md:px-16 pb-20 md:pb-10 footer-page">
+            <div class="w-full h-full flex md:flex-row flex-col-reverse md:pt-0 pt-10">
+                <div class="container py-10 md:py-20 text-center flex flex-col items-center  md:pt-0 pt-20">
+                    <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer pb-8 md:w-[50%] border-b-[1px]">InDACON 2025</h2>
+                    <div class="w-full h-10 flex text-white text-center justify-center md:pb-0 pb-16">
+                        <div class="flex space-x-6 mb-16 pt-8 px-8"> 
+                            <a href="https://www.instagram.com/iiche_hbtu?igsh=bzh1MWpyNXZmbzBt" class="text-white hover:text-gray-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/iiche-student-chapter-hbtu/" class="text-white hover:text-gray-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@iicheschbtu" class="text-white hover:text-gray-300">
+                                <svg viewBox="0 0 24 24" class="w-6 h-6">
+                                    <path 
+                                    fill="#FFFFFF" 
+                                    d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.9 3.6 12 3.6 12 3.6s-7.9 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 7.8 0 12 0 12s0 4.2.5 5.8c.3 1 1 1.8 2 2.1 1.6.5 9.5.5 9.5.5s7.9 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.6.5-5.8.5-5.8s0-4.2-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"
+                                    />
+                                </svg>
+                            </a>
                         </div>
+                    </div>
+                </div>
+                <div class="container md:py-8 px-8">
+                    <div class="max-w-4xl footer">
+                        <div class="w-full h-full flex gap-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path 
+                                  fill="#FFFFFF" 
+                                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                                />
+                              </svg>
+                            <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
+                        </div>
+                        <div class="flex">
+                            <div class="flex flex-col pb-6">
+                                <p class="font-semibold pb-2">Faculty Coordinators:</p>
+                                <ul class="space-y-1">
+                                    <li>Dr. S.V.A.R. Sastry, Associate Professor</li>
+                                    <li>Dr. Shravan Kumar, Assistant Professor</li>
+                                </ul>
+                            </div> 
+                        </div>
+                            <div class="space-y-1">
+                                <p>School of Chemical Technology, HBTU, Kanpur, U.P.</p>
+                                <p>Pin-208002</p>
+                                <p class="font-semibold">Phone: 7093423964, 7577082588</p>
+                                <p class="flex flex-col">Email: 
+                                    <a href="mailto:svarsastry@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>
+                                    <a href="mailto:shravan.k@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
+                                </p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
     <script src="https://unpkg.com/split-type"></script>
