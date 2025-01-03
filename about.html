@@ -6,393 +6,512 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         .bg-texture {
+            background-color: #f5f5dc;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        /* Custom grain texture style */
+        .grain-bg {
+            background-color: #0A0470; /* Base color */
+        }
+        .gradient-1{
+            background: linear-gradient(133deg, rgba(18, 11, 96, 1) 0%, rgba(82, 16, 72, 1) 100%) !important
+        }
+        .gradient-2{
+            background: linear-gradient(4deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+        }
+        .gradient-2-2{
+            background: linear-gradient(4deg, rgba(22, 22, 22, 0.247) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%,rgb(10, 1, 20) 100%);
+        }
+        .gradient-3{
+            background: linear-gradient(345deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 21%);
+        }
+        .circle{
+            position: absolute;
+            left: -3%;
+            top: -10%;
+            right: 0;
+            bottom: 0;
+            width: 106%;
+            height: 130%;
+            border: 2px solid #ff80ed;
+            border-radius: 50%;
+            -webkit-transform: rotate(-6deg);
+            -ms-transform: rotate(-6deg);
+            transform: rotate(-6deg)
+        }
+        .bur-line {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .burger-open .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger-open .line2 {
+      opacity: 0;
+    }
+    .burger-open .line3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    </style>
 </head>
 <body>
-    <div  class="sidemenu text-white bg-black h-full w-full">
+    <div class="main w-full h-full bg-[#0d0d0a] text-white relative">
+        <div  class="sidemenu bg-black h-full w-full">
                 
-        <nav id="menu" class="fixed top-0 left-0 w-full h-screen bg-black shadow-lg z-[9999]">
-           <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON'25</div>
-           <button id="closebtn" class="fixed top-4 right-4 p-2 z-[99999] rounded-lg">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4L20 20" stroke-linecap="round"></path>
-                <path d="M20 4L4 20" stroke-linecap="round"></path>
-              </svg>
-            </button>
-            <div class="px-16 mt-16 overflow-hidden flex flex-col gap-8">
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
-                <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
-           </div>
-           <div class="flex space-x-6 mb-8 pt-24 px-8"> 
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-gray-300">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-            </a>
+                <nav id="menu" class="fixed top-0 left-0 w-full h-screen bg-black shadow-lg z-[9999]">
+                   <div class="text-white text-3xl font-bold px-8 pt-20 font-[heading1] menu-head">InDACON'25</div>
+                   <button id="closebtn" class="fixed top-4 right-4 p-2 z-[99999] rounded-lg">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4L20 20" stroke-linecap="round"></path>
+                        <path d="M20 4L4 20" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <div class="px-16 mt-16 overflow-hidden flex flex-col gap-8">
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
+                        <a class="menu-head overlow-hidden text-[1.6rem] font-semibold hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                   </div>
+                   <div class="flex space-x-6 mb-8 pt-24 px-8"> 
+                        <a href="https://www.instagram.com/iiche_hbtu?igsh=bzh1MWpyNXZmbzBt" class="text-white hover:text-gray-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/iiche-student-chapter-hbtu/" class="text-white hover:text-gray-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <!-- <a href="#" class="text-white hover:text-gray-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a> -->
+                        <a href="https://www.youtube.com/@iicheschbtu" class="text-white hover:text-gray-300">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6">
+                                <path 
+                                fill="#FFFFFF" 
+                                d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.9 3.6 12 3.6 12 3.6s-7.9 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 7.8 0 12 0 12s0 4.2.5 5.8c.3 1 1 1.8 2 2.1 1.6.5 9.5.5 9.5.5s7.9 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.6.5-5.8.5-5.8s0-4.2-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
         </div>
-        </nav>
-</div>
-    <div class="inset-0 bg-black h-screen sidemenu absolute z-[9999] hidden">
-        <div class="w-full h-full noise p-6">
-            <div class="flex justify-end">
-                <button onclick="sideclose()" class="text-white text-5xl pr-4">&times;</button>
-            </div>
-            
-            <!-- Logo -->
-            <div class="text-white text-4xl font-bold mb-8 font-[heading1] pt-10">InDACON</div>
-            
-            <!-- Main Navigation -->
-            <nav class="mb-16">
-                <ul class="space-y-4">
-                    <li><a href="about.html" class="text-white text-2xl font-medium hover:text-pink-500 ">About</a></li>
-                    <li><a href="speaker.html" class="text-white text-2xl font-medium hover:text-pink-500">Speakers</a></li>
-                    <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="gotoschedule()" >Schedule</a></li>
-                    <li><a href="#" class="text-white text-2xl font-medium hover:text-pink-500" onclick="sponserclk()">Sponsors</a></li>
-                </ul>
-            </nav>
-            
-            <!-- Register Button -->
-            <button onclick="registerclk()" class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 rounded font-bold mb-8">
-                REGISTER TODAY
-            </button>
-            
-            <!-- Social Icons -->
-            <div class="flex space-x-6 mb-8">
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
-                    </svg>
-                </a>
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
-                </a>
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-                <a href="#" class="text-white hover:text-gray-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="main h-full w-full bg-[#0d0d0a] text-white">
-        <div class="page-1 w-full flex flex-col h-auto relative gradient-1">
-            <div class="gradient-2 h-full w-full">
-                <div class="gradient-3 gradient-2 h-full w-full">
-                    <div class="noise h-full w-full px-6 md:px-12 relative">
-                        <nav class="w-full flex justify-between	h-20 py-12 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
-                            <div class="flex">
-                                <a class="font-semibold md:text-[2.5vw] text-[6vw] leading-[30px] font-[heading1] nav" href="index.html">InDACON'25</a>
+        <div class="w-full h-full">
+            <div class="page-1 w-full flex flex-col h-screen relative gradient-1">
+                <div class="gradient-2 h-full w-full">
+                    <div class="gradient-3 gradient-2 h-full w-full">
+                        <div class="noise h-full w-full px-[3vw] md:px-12 relative">                       
+                            <nav class="w-full flex justify-between	h-20 py-12 items-center text-lg nav-bar fixed left-0 px-12 z-[999]">
+                                <div class="flex">
+                                    <a class="font-semibold md:text-[2rem] text-[6vw] leading-[30px] font-[heading1] nav" href="index.html">InDACON'25</a>
+                                </div>
+                                <div class="flex gap-16 items-center nav">
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
+                                    <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                                </div>
+                                <div class="flex">
+                                    <a class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
+                                    <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
+                                        <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                          <path d="M4 6h16M4 12h16M4 18h16"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="w-full h-[65%] flex justify-end items-center text-[9vw] md:text-[5.5vw] flex-col leading-[8vw] md:leading-[3.5vw] font-[700] tracking-tight relative mb-5 font-[heading2] overflow-hidden">
+                                <h1 class="font-serif md:text-[2.5vw] text-[1.7rem] pb-16 font-medium tracking-wide">February 20th-22th</h1>
+                                <div class="flex flex-col gap-[1.5rem] md:flex-row text-center tracking-tight pb-1 flex-col text-[8.2vw] md:text-[4.5vw]">
+                                    <h1 class="hero-para">INTERNATIONAL</h1>
+                                    <h1 class="hero-para">CONFERENCE</h1>
+                                </div>
+                                <br>
+                                <h1 class="text-[1.7rem] md:text-[4.5vw] hero-para">InDACON - 2025</h1>
                             </div>
-                            <div class="flex gap-16 items-center nav">
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="index.html">Home</a>
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="about.html">About</a>
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="speaker.html">Speakers</a>
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" onclick="gotoschedule()" >Schedule</a>
-                                <a class="font-normal text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsorship</a>
+                            <div class="h-[35%] w-full relative flex flex-col gap-4 md:gap-10 pt-10 md:flex-row justify-center items-center">
+                                <a class="register-btn text-[1rem] text-center md:right-[12%] md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] text-white bg-[#2D01F6] tracking-normal rounded-md hover:bg-[#7456FF]" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register For Conference</a>
+                                <a class="register-btn text-[1rem] md:left-[12%] text-center  md:text-[1.6vw] font-[500] px-8 py-4 font-[heading2] text-white bg-[#DD197F] tracking-normal hover:bg-[#F846A3] hover:pointer rounded-md" href=" https://docs.google.com/forms/d/e/1FAIpQLSe_RaORmftL08aAWsj6JHpHM-_O3zmQlP3Fw89OXlOlX_9WYg/viewform">Abstract  Submission Link</a>
                             </div>
-                            <div class="flex">
-                                <a class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
-                                <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
-                                    <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                      <path d="M4 6h16M4 12h16M4 18h16"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </nav>
-                       
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w-full min-h-screen flex page-2 pt-32 md:pt-0 noise px-6 md:px-12 relative">
-            <div class="h-full w-full hero pt-52 md:pt-52 flex items-center md:flex-row flex-col-reverse md:px-[0px] justify-center items-center">
-                <div class="data h-full w-full md:w-[60%] text-[3rem] font-bold md:pr-8">
-                     <h1 class="pb-8 md:pt-0 pt-5 w-full text-[2.5rem] md:text-[3.5rem] md:text-left text-center">About the University</h1>
-                     <p class="text-[1.1rem] h-full text-center font-light w-full md:w-[90%] leading-[30px]">Harcourt Butler Technical University, Kanpur (Formerly HBTI, Kanpur) was established in 1921and has a glorious history and has always been at the forefront of technological developments andthe growth of industries in the country since its inception. The Institute began as the GovernmentTechnological Institute, Uttar Pradesh in 1921. The Institute was renamed Harcourt ButlerTechnological Institute in 1926 in honor of the name of Sir Spencer Harcourt Butler, the thenGovernor of U.P. Degree courses in Oil Technology were started in 1921, and ChemicalEngineering was started in 1954 and after that number of undergraduate and post graduatecourses were started. On March 26, 1965, it was upgraded from a Government Department statusto an Autonomous Institution. It was upgraded to Harcourt Butler Technical University, Kanpur onSeptember 01, 2016, by Govt. of UP. The University spreads across two campuses - EastCampus (77 acres) and West Campus (271 acres) situated approximately 3 kilometers apart. TheUniversity provides a congenial environment for the holistic growth and all-round development ofthe students.</p>
-                 </div>
-                 <div class="md:w-[50%] h-full md:flex pt-10">
-                     <img class="w-full md:relative rounded md:rounded-lg absolute right-0 top-[10%]" src="WhatsApp_Image_2022_11_23_at_1_52_56_PM.jpeg" alt="">
-                 </div>
-            </div>
-        </div>
-        <div class="w-full min-h-screen flex page-2 pt-32 md:pt-0 noise px-6 md:px-12 relative">
-            <div class="h-full w-full hero pt-[20rem] md:pt-52 flex items-center md:flex-row flex-col-reverse md:px-[0px] justify-center items-center">
-                <div class="data h-full w-full md:w-[55%] text-[3rem] font-bold md:pr-8">
-                    <h1 class="pb-8 md:pt-0 pt-5 w-full text-[2.5rem] md:text-[3.5rem] md:text-left text-center md:leading-[5rem] leading-[4rem]">ABOUT THE SCHOOL OF CHEMICAL TECHNOLOGY</h1>
-                    <p class="text-[1.1rem] h-full text-center font-light w-full md:w-[90%] leading-[30px]">University offers distinctive study programs with its priority and thrust in imparting high-quality education in seven Chemical Technology branches, namely Oil Technology (Estd. 1921), Chemical Engineering (Estd. 1954), Plastic Technology (Estd. 1964), Paint Technology (Estd. 1964), Food Technology (Estd. 1964), Bio-chemical Engineering (Estd. 1964) and Leather Technology (Estd. 1978). The School of Chemical Technology (SoCT) produced more than 15,000 graduates in these programs which cater to the industry and top-level management human resource demands at the National and International level. Alumni from the School of Chemical Technology are placed as CEOs/MD's of many top Companies across the world.</p>
-                </div>
-                <div class="md:w-[50%] h-full md:flex pt-10">
-                    <img class="w-full md:relative rounded md:rounded-lg absolute right-0 top-[10%]" src="PG-Lab.jpeg" alt="">
+    
+            <div class="md:h-auto h-full w-full page-2 flex justify-center items-center text-[6.9vw] md:text-[4.2vw] font-serif md:leading-[6rem] noise gradient-3 relative">
+                <div class="gradient-2-2 px-6 md:px-8">
+                    <div class="w-full h-full mt-52 mb-40 md:px-[40px] quote-cont">
+                        <h1 class="quote font-[quotefont]">“ Chemical Resilience & Sustainable Practices: Advanced materials in Water purification strategies for Desalination, Energy production & Enviromental conservation "</h1>
+                    </div>
+    
                 </div>
             </div>
-        </div>
-        <div class="w-full min-h-screen flex page-3 pt-32 md:pt-0 noise px-6 md:px-12 relative pb-[10rem]">
-            <div class="h-full w-full hero pt-[20rem]  md:pt-52 flex items-center md:flex-row flex-col-reverse md:px-[0px] justify-center items-center">
-                <div class="data h-full w-full md:w-[60%] text-[3rem] font-bold md:pr-8">
-                    <h1 class="pb-8 md:pt-0 pt-5 w-full text-[2.5rem] md:text-[3.5rem] md:text-left text-center md:leading-[5rem] leading-[4rem]">ABOUT INDIAN DESALINATION ASSOCIATION (InDA)</h1>
-                    <p class="text-[1.1rem] h-full text-center font-light w-full md:w-[90%] leading-[30px]">Established in 1991, the Indian Desalination Association (InDA) is dedicated to advancing the responsible utilization of desalination and water treatment technologies. Functioning as a neutral entity devoid of commercial bias, InDA plays a pivotal role in raising awareness and fostering enhanced collaboration among stakeholders. This includes user sectors, industries, academicians, policy makers, and program implementation agencies. As an affiliate of the International Desalination Association (IDA) and the Asia Pacific Desalination Association (APDA), InDA actively engages in policy advocacy and adopts global best practices. Through its annual conferences, workshops, seminars, and webinars, InDA not only cultivates skills but also facilitates interaction with small and medium industries, helping them address challenges in water and wastewater treatment, management, and associated environmental issues.</p>
-                </div>
-                <div class="md:w-[50%] h-full md:flex pt-10">
-                    <img class="w-full md:relative rounded md:rounded-lg absolute right-0 top-[10%]" src="PG-Lab.jpeg" alt="">
+            <div class="page-3 w-full h-auto flex gap-5 md:gap-12 flex-col md:flex-row noise px-8 md:px-16">
+                <div class=" text-[9vw] font-bold mt-[8vw] md:my-[10vw] md:w-full md:text-[2.9rem] leading-[1.35em] font-[heading1] about">About the <span class="font-[heading1] text-[#FF80ED]">Conference</span></div>
+                <div class="flex flex-col gap-10 md:text-[1.2rem] mt-[8vw] leading-9 md:w-full mb-[10vw] ">
+                    <h2 class="about-para">This International Conference, organized by the Departments of Chemical and Biochemical Engineering at Harcourt Butler Technical University (HBTU) in collaboration with the Indian Desalination Association (InDA), will focus on trends in desalination, water, energy, and the environment. Key topics include wastewater treatment, water resource management, purification methods, and waste management.</h2>
+                    <h2 class="about-para">Experts will share insights on advanced material synthesis and its applications in tackling challenges in desalination, energy, and environmental sustainability. Technical sessions will highlight innovative technologies and strategies to address these pressing global issues effectively.
+                    </h2>
+                    <h2 class="about-para">The event will foster collaboration among researchers, industry professionals, and policymakers. Through workshops and discussions, participants can exchange ideas on emerging solutions, contributing to advancements in sustainable water and energy management.</h2>
                 </div>
             </div>
-        </div>
-        <div class="w-full min-h-screen noise px-8 md:px-16">
-            <h1 class="text-center text-[9vw] md:text-6xl font-[heading1]">Organizing Committe</h1>
-            <div class="container mx-auto px-4 py-8">
-                <!-- Chief Patron Section -->
-                <h2 class="text-2xl font-bold text-center mb-12 text-[#DD197F]">CHIEF PATRON</h2>
-                <div class="flex justify-center mb-16">
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/vc.jpeg" alt="Prof. Samsher" class="w-full h-full object-contain">
+    
+            <div class="page-4 w-full h-auto flex flex-col gap-8 noise px-8 md:px-16">
+                <div class="h-full w-full md:mb-16">
+                    <div class="speaker-heading relative">
+                        <h1 class="font-[heading1] text-[2rem] md:text-[4rem] font-bold tracking-wider pb-12 font-semibold underline decoration-2 underline-offset-[12px] speakheading">Speakers</h1>
+                    </div>
+        
+                    <div class="w-full h-full flex flex-wrap flex-col md:flex-row justify-between pb-12 md:pb-16 collage">
+                        <div class="rounded-2xl py-6 h-auto w-auto basis-1/4 photo">
+                            <div class="w-full flex justify-center items-center pb-6">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/dalai-profile.jpg" alt="">
                             </div>
-                            <div class="role-label">Chief Patron</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. Samsher, Hon'ble</h3>
-                            <p class="text-gray-600">Vice Chancellor, HBTU Kanpur</p>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px] text-[4.5vw] md:text-[1.7vw]">Prof. Ajay K. Dalai</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Saskatchewan</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
+                            </div>
                         </div>
+                        <div class=" rounded-2xl py-6 basis-1/4 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/meda-profile-2022.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px] text-[4.5vw] text-[1.7vw]">Prof. Venkatesh Meda</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Saskatchewan</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl py-6 basis-1/4 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/mehrotra.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px] text-[4.5vw] text-[1.7vw]">Prof. Anil Mehrotra</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Calgary</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl py-6 basis-1/4 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/P23144TA210090_p_6 square.jpg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px] text-[4.5vw] text-[1.7vw]">Prof. Amar Mohanty</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Guelph</h1>
+                                <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
+                            </div>
+                        </div>
+                        <!-- <div class="rounded-2xl py-6 basis-1/5 photo">
+                            <div class="w-full flex justify-center items-center pb-6 ">
+                                <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="5.jpeg" alt="">
+                            </div>
+                            <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
+                                <h1 class="font-medium mb-[8px]">Prof. Manjusri Mishra</h1>
+                                <h1>University of Guelph</h1>
+                                <h1>Canada</h1>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="w-full h-full text-2xl md:text-xl font-semibold tracking-wide flex justify-end px-8 ">
+                        <a class="font-[heading2] underline md:hover:underline underline-offset-8 hover:text-[1.4rem] duration-300 cursor-pointer ease-in-out" href="speaker.html">All Speakers</a>
                     </div>
                 </div>
-        
-                <!-- Patron Section -->
-                <h2 class="text-2xl font-bold text-center mb-12 text-[#DD197F]">PATRON</h2>
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 relative">
-                                <img src="college image/inda-pres.jpeg" alt="Prof. V. K. Srivastava" class="w-full absolute top-[5%] h-full object-contain">
-                            </div>
-                            <div class="role-label">Patron</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. V. K. Srivastava</h3>
-                            <p class="text-gray-600">President, InDA</p>
-                        </div>
-                    </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4 flex relative">
-                                <img src="college image//pro-vc.jpeg" alt="Prof. D. Parmar" class="w-full absolute top-[5%] h-full object-contain">
-                            </div>
-                            <div class="role-label">Patron</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. D. Parmar</h3>
-                            <p class="text-gray-600">Pro-VC, HBTU Kanpur</p>
-                        </div>
-                    </div>
-        
+            </div> 
+    
+             <div class="page-5 w-full max-h-screen flex items-center noise px-8 md:px-16" id="schedule">
+                <div class="w-full text-white rounded-lg px-6 md:mt-[6vw] mt-36 mb-36 ">
+                    <h2 class="text-[7.9vw] md:text-[4rem] font-[heading1] font-bold tracking-wider mb-12 imp-heading headingimp">Important Dates</h2>
+                    <table class="table-auto w-full border-collapse border border-blue-500 rounded-lg overflow-hidden">
+                        <thead>
+                          <tr class="bg-blue-500">
+                            <th class="border border-blue-500 px-4 py-2 text-left md:text-[1.7rem]">Event</th>
+                            <th class="border border-blue-500 px-4 py-2 text-left md:text-[1.7rem]">Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission Start</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">16/06/2024</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission End</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">30/11/2024</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Announcement of Acceptance of Abstract</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">10/12/2024</td>
+                          </tr>
+                          <tr>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Last Date of Online Registration</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">5/1/2025</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+            </div> 
+    
+            <div class="min-h-screen w-full page-6 flex flex-nowrap flex-col noise px-8 md:px-16">
+                <div class="relative w-full h-full text-revel flex items-center overflow-hidden">
+                    <h1 id="theme-head" class="theme-head font-bold text-white text-[9vw] md:text-[4rem] font-[heading2] w-[60%]">
+                        Empowering Ideas, Shaping Futures: <span class="font-[heading2] text-[#FF80ED]"> The Conference Revolution</span>
+                    </h1>
                 </div>
-        
-                <!-- Chairpersons Section -->
-                <h2 class="text-2xl font-bold text-center mb-12 text-[#DD197F]">CHAIRPERSONS</h2>
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/MNIT presd.jpeg" alt="Prof. S. P. Chaurasia" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Chairperson</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. S. P. Chaurasia</h3>
-                            <p class="text-gray-600">Past President, InDA & Prof., MNIT Jaipur</p>
-                        </div>
+                <div class="h-full w-full flex md:gap-2 flex-col md:flex-row gap-[4rem] pb-32">
+                    <div class="w-0 md:w-[55%] h-full">
                     </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image//SOCT.jpeg" alt="Prof. G.L Devnani" class="w-full h-full object-cover">
+                    <div class="them-list h-full flex flex-col justify-center gap-4 text-[1rem] md:text-[1.7rem] items-start text-left w-full md:w-[45%] theme-lines">
+                            <div class="flex flex-col gap-3">
+                                <h1>Advanced Materials for Water Purification</h1>
+                                <div id="liness" class="theme-line h-[2px] m-0"></div>
                             </div>
-                            <div class="role-label">Chairperson</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. G.L Devnani</h3>
-                            <p class="text-gray-600">Dean, SOCT, HBTU Kanpur</p>
-                        </div>
-                    </div>
-        
-                    <!-- <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/" alt="Prof. Ashish Kapoor" class="w-full h-full object-cover">
+                            <div class="flex flex-col gap-3">
+                                <h1>Advances in Sustainable Construction Materials</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
                             </div>
-                            <div class="role-label">Chairperson</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. Ashish Kapoor</h3>
-                            <p class="text-gray-600">HoD Chemical Engg., HBTU Kanpur</p>
-                        </div>
-                    </div> -->
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/Dr.-Lalit-Kumar-150x150.jpg" alt="Prof. Lalit Kumar Singh" class="w-full h-full object-cover">
+                            <div class="flex flex-col gap-3">
+                                <h1>Air and Noise Pollution</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
                             </div>
-                            <div class="role-label">Chairperson</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. Lalit Kumar Singh</h3>
-                            <p class="text-gray-600">HoD Biochemical Engg., HBTU Kanpur</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Organizing Secretary Section -->
-                <h2 class="text-2xl font-bold text-center mb-12 text-[#DD197F]">ORGANISING SECRETARY</h2>
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/SVARsastry.jpeg" alt="Dr. S.V.A.R Sastry" class="w-full h-full object-cover">
+                            <div class="flex flex-col gap-3">
+                                <h1>Materials for Energy Storage</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
                             </div>
-                            <div class="role-label">Organizing Secretary</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. S.V.A.R Sastry</h3>
-                            <p class="text-gray-600">Associate Professor, HBTU Kanpur</p>
-                        </div>
-                    </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image//madhu agarwal.jpeg" alt="Prof. Madhu Agarwal" class="w-full h-full object-cover">
+                            <div class="flex flex-col gap-3">
+                                <h1>Wastewater Treatment, Recovery and Reuse</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
                             </div>
-                            <div class="role-label">Organizing Secretary</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Prof. Madhu Agarwal</h3>
-                            <p class="text-gray-600">Secretary, InDA & Prof., MNIT Jaipur</p>
-                        </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Water Policies and Planning</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h1>Membrane and Thermal Desalination</h1>
+                            <div id="liness" class="theme-line h-[2px]"></div>
+                            </div>
                     </div>
                 </div>
-        
-                <h2 class="text-2xl font-bold text-center mb-12 text-[#DD197F]">CONVENERS</h2>
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/Shravan kumar.jpeg" alt="Dr. Zeenat Arif" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black text-black font-semibold mt-2">Dr. Shravan Kumar</h3>
-                            <p class="text-gray-600">Assistant Professor, HBTU Kanpur</p>
-                        </div>
+            </div>
+    
+            <div class="w-full min-h-screen page-8 flex items-center noise px-8 md:px-16" id="register" name="register">
+                <div class="container p-6">
+                    <h1 class="md:text-[4rem] text-[6.5vw] font-bold mb-12 font-[heading1] headingreg">REGISTRATION</h1>
+                    <div class="overflow-x-auto text-black rounded-xl bg-[#DAD9D5]">
+                        <table class="table-auto w-full border-collapse border rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-blue-800">
+                                    <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl md:text-[1.5rem]">Post</th>
+                                    <th class="border border-gray-700 px-4 py-2 text-left text-white text-xl md:text-[1.5rem]">Price (Rs.)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-lg">
+                                    <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Foreign Delegate (Online)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">5000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Delegate from Industries/ Scientist</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">4000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Faculty from Academic Institutions (Non - InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">4000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Faculty from Academic Institutions (InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">3000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Post Graduate / Research Scholar (Non - InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">3000/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">Post Graduate / Research Scholar (InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1500/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">UG/Diploma Student (Non - InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1500/-</td>
+                          </tr>
+                          <tr class="text-lg">
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">UG/Diploma Student (InDA Member)</td>
+                            <td class="border border-gray-700 px-4 py-3 text-[3.5vw] md:text-[1.4rem]">1000/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/Pranava chaudhary.jpeg" alt="Dr. Bibeeta Singh" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. Pranava Chaudhari</h3>
-                            <p class="text-gray-600">Assistant Professor, HBTU Kanpur</p>
-                        </div>
-                    </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/dipaloy datta.jpeg" alt="Dr. Rajkamal Kushwaha" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. Dipaloy Datta</h3>
-                            <p class="text-gray-600">Treasurer ,InDA ,MNIT Jaipur</p>
-                        </div>
-                    </div>
+                    <p class="text-red-500 mt-6 text-center mb-7">* 5% Additional fees for SPOT registration</p>
+                    <h2 class="text-center md:text-[1.4rem]">Last date for registration is <span class="font-bold">5th January,</span> 2025</h2>
+                    <h2 class="text-center md:text-[1.4rem]">All the registered participants will get the certificate</h2>
+                  </div>
+                
+            </div>
 
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/joint secratary.jpeg" alt="Dr. Rajkamal Kushwaha" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. Ranjeev Kumar Dohare</h3>
-                            <p class="text-gray-600">Joint Secretary,InDA ,MNIT Jaipur</p>
+            <div class="w-full h-auto page-9 flex items-center noise px-8 md:px-16">
+                <div class="w-full pb-36 pt-20">
+                    <h1 class="md:text-[4rem] text-[6.5vw] font-bold mb-12 font-[heading1] mb-12">
+                        INDA REGISTRATION FLOWCHART
+                    </h1>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                        <div class="bg-white border-4 rounded-xl p-6 w-full md:w-1/3">
+                            <h2 class="text-2xl font-bold text-center mb-4 text-[#DD197F]">ABSTRACT SUBMISSION</h2>
+                        </div>
+                        <div class="hidden md:block">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="flex justify-center my-8 block md:hidden">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="rounded-xl bg-white p-6 w-full md:w-1/3">
+                            <h2 class="text-2xl font-bold text-center mb-4 text-[#DD197F]">ABSTRACT ACCEPTANCE</h2>
+                        </div>
+                        <div class="hidden md:block">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="flex justify-center my-8 block md:hidden">
+                            <svg class="w-12 h-12 text-[#DD197F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div class="rounded-xl bg-white p-6 mx-auto w-full md:w-1/3">
+                            <h2 class="text-2xl font-bold text-center mb-4 text-[#DD197F]">REGISTRATION & PAYMENT</h2>
                         </div>
                     </div>
                 </div>
-
-                <!-- Coordinators Section -->
-                <h2 class="text-2xl font-bold text-center mb-12 text-[#DD197F]">COORDINATORS</h2>
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/zeenath.jpeg" alt="Dr. Zeenat Arif" class="w-full h-full object-contain">
+            </div>
+    
+            <div class="h-screen w-full noise flex page-10 relative">
+                    <div class="event-img h-full w-full absolute flex justify-center items-center z-[5]">
+                        <img class="bg-blue-300 h-full w-full object-cover" src="audi.jpg" alt="">
+                    </div>
+                    <div class="h-screen md:h-full w-full flex relative justify-center items-center md:px-16">
+                        <div class="w-full h-full flex md:flex-row flex-col items-center justify-center p-8 absolute z-[7] noise">
+                            <div class="flex md:flex-row flex-col rounded-lg md:h-[80%] h-[95%] gradient-1 w-[90%]">
+                                <div class="md:h-full h-[40%] w-full md:w-[30%]">
+                                    <img 
+                                        src="loca.jpeg"
+                                        alt="Palace Arts Center"
+                                        class="rounded-lg w-full h-full object-cover"
+                                    >
+                                </div>
+                                <div class="flex md:pl-16 space-y-4 md:space-y-8 noise p-8 flex items-center gradient-3">
+                                    <div class="space-y-6">
+                                        <p class="text-pink-500 text-[4vw] md:text-[1.2rem] font-[heading1] font-medium tracking-wider">THE VENUE</p>
+                                        
+                                        <h2 class="text-[4vw] md:text-4xl font-bold text-white tracking-wider font-[heading2]">
+                                            HARCOURT BUTLER<br>TECHNICAL UNIVERSITY
+                                        </h2>
+                                        
+                                        <p class="text-gray-200">
+                                            HBTU East Campus, Nawabganj, Kanpur, Uttar Pradesh 208002
+                                        </p>
+                                        
+                                        <div class="flex space-x-8 pt-4">
+                                            <a href="https://www.google.com/maps/place/Kanpur+Nagar,+Uttar+Pradesh/@26.3431431,80.2277943,11z/data=!4m6!3m5!1s0x399c47831a987bf3:0x53df4d42cef9f8d6!8m2!3d26.4148245!4d80.2321313!16zL20vMDgwa25k?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                                <span>01. CITY GUIDE</span>
+                                                <span class="ml-2">→</span>
+                                            </a>
+                                            
+                                            <a href="https://www.google.com/maps/dir//F8V4%2B3XW+HBTU+East+Campus,+HBTU,+HBIT+East+Campus,+Nawabganj,+Kanpur,+Uttar+Pradesh+208002/@26.4926941,80.3063209,17.56z/data=!4m9!4m8!1m0!1m5!1m1!1s0x399c384055555551:0xd01b36f50ed65188!2m2!1d80.3074438!2d26.4927312!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" class="text-[3.5vw] md:text-[1.25rem] flex items-center font-medium text-white hover:text-pink-500 transition-colors">
+                                                <span>02. DIRECTIONS</span>
+                                                <span class="ml-2">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. Zeenat Arif</h3>
-                            <p class="text-gray-600">Assistant Professor, HBTU Kanpur</p>
                         </div>
                     </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/Bineeta singh.jpeg" alt="Dr. Bibeeta Singh" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. Bibeeta Singh</h3>
-                            <p class="text-gray-600">Assistant Professor, HBTU Kanpur</p>
-                        </div>
-                    </div>
-        
-                    <div class="bg-white rounded-lg shadow-xl p-6 w-72 text-center transform hover:scale-105 transition-transform">
-                        <div class="flex flex-col items-center">
-                            <div class="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 mb-4">
-                                <img src="college image/kushwaha.jpeg" alt="Dr. Rajkamal Kushwaha" class="w-full h-full object-cover">
-                            </div>
-                            <div class="role-label">Coordinator</div>
-                            <h3 class="text-xl text-black font-semibold mt-2">Dr. Rajkamal Kushwaha</h3>
-                            <p class="text-gray-600">Assistant Professor, HBTU Kanpur</p>
-                        </div>
-                    </div>
+            </div>
+    
+            <div class="w-full max-h-screen flex flex-col items-center page-11 noise md:px-16 px-8">
+                <div class="text-[2rem] md:text-[4rem] font-bold font-[heading1] w-full mt-[10vw] footerhead">
+                    <h1>Payment Mode: <span class="font-medium font-[heading2] text-[1.75rem] md:text-[3rem]">Bank Transfer</span></h1>
                 </div>
+                <div class="p-8 w-full flex flex-col md:text-[1.1rem] font-semibold leading-8 rounded-xl pb-[10vw] tracking-wide">
+                    <h1>Bank : <span>Central Bank Of India</span></h1>
+                    <h1>Branch : <span>HBTI Kanpur</span></h1>
+                    <h1>A/C Name : <span>inDA-HBTU</span></h1>
+                    <h1>A/C No. : <span>5307313942</span></h1>
+                    <h1>IFSC : <span>CBIN0283288</span></h1>
+                </div>        
             </div>
         </div>
-        <footer class="h-auto w-full flex flex-col md:flex-row md:px-16 pb-20 md:pb-10 footer-page">
-            <div class="container py-10 md:py-20 text-center">
-                <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer">InDACON'25</h2>
-            </div>
-            <div class="container md:py-8 px-8">
-                <div class="max-w-4xl footer">
-                    <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
-                    <div class="flex">
-                        <div class="flex flex-col pb-6">
-                            <p class="font-semibold pb-2">Faculty Coordinators:</p>
-                            <ul class="space-y-1">
-                                <li>Dr. S.V.A.R. Sastry, Associate Professor</li>
-                                <li>Dr. Shravan Kumar, Assistant Professor</li>
-                            </ul>
-                        </div> 
-                    </div>
-                        <div class="space-y-1">
-                            <p>School of Chemical Technology, HBTU, Kanpur, U.P.</p>
-                            <p>Pin-208002</p>
-                            <p class="font-semibold">Phone: 7093423964, 7577082588</p>
-                            <p class="flex flex-col">Email: 
-                                <a href="mailto:svarsastry@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>
-                                <a href="mailto:shravan.k@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
-                            </p>
+
+        <footer class="h-auto w-full flex flex-col  md:px-16 pb-20 md:pb-10 footer-page">
+            <div class="w-full h-full flex md:flex-row flex-col-reverse md:pt-0 pt-10">
+                <div class="container py-10 md:py-20 text-center flex flex-col items-center  md:pt-0 pt-20">
+                    <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer pb-8 md:w-[50%] border-b-[1px]">InDACON 2025</h2>
+                    <div class="w-full h-10 flex text-white text-center justify-center md:pb-0 pb-16">
+                        <div class="flex space-x-6 mb-16 pt-8 px-8"> 
+                            <a href="https://www.instagram.com/iiche_hbtu?igsh=bzh1MWpyNXZmbzBt" class="text-white hover:text-gray-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/iiche-student-chapter-hbtu/" class="text-white hover:text-gray-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@iicheschbtu" class="text-white hover:text-gray-300">
+                                <svg viewBox="0 0 24 24" class="w-6 h-6">
+                                    <path 
+                                    fill="#FFFFFF" 
+                                    d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.9 3.6 12 3.6 12 3.6s-7.9 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 7.8 0 12 0 12s0 4.2.5 5.8c.3 1 1 1.8 2 2.1 1.6.5 9.5.5 9.5.5s7.9 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.6.5-5.8.5-5.8s0-4.2-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"
+                                    />
+                                </svg>
+                            </a>
                         </div>
+                    </div>
+                </div>
+                <div class="container md:py-8 px-8">
+                    <div class="max-w-4xl footer">
+                        <div class="w-full h-full flex gap-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path 
+                                  fill="#FFFFFF" 
+                                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                                />
+                              </svg>
+                            <h3 class="text-xl font-semibold mb-4 font-[heading2]">CONTACT DETAILS</h3>
+                        </div>
+                        <div class="flex">
+                            <div class="flex flex-col pb-6">
+                                <p class="font-semibold pb-2">Faculty Coordinators:</p>
+                                <ul class="space-y-1">
+                                    <li>Dr. S.V.A.R. Sastry, Associate Professor</li>
+                                    <li>Dr. Shravan Kumar, Assistant Professor</li>
+                                </ul>
+                            </div> 
+                        </div>
+                            <div class="space-y-1">
+                                <p>School of Chemical Technology, HBTU, Kanpur, U.P.</p>
+                                <p>Pin-208002</p>
+                                <p class="font-semibold">Phone: 7093423964, 7577082588</p>
+                                <p class="flex flex-col">Email: 
+                                    <a href="mailto:svarsastry@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">svarsastry@hbtu.ac.in</a>
+                                    <a href="mailto:shravan.k@hbtu.ac.in" class="pl-12 hover:underline underline-offset-4 duration-300 hover:text-blue-300">shravan.k@hbtu.ac.in</a>
+                                </p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
     <script src="https://unpkg.com/split-type"></script>
