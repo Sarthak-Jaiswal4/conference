@@ -32,6 +32,10 @@
     font-family: quotefont;
     src: url(silkamono-medium-webfont.woff2);
 }
+@font-face {
+    font-family: speakerfont;
+    src: url(silkamono-regular-webfont.woff2);
+}
 .going-up{
     background-color: black;
     transition-duration: 0.2s;
