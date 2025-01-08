@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>InDACON25</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -84,7 +84,40 @@
                                 <p class="text-[#DD197F] md:px-[4.5vw] text-[1.6rem] md:text-[3.2vw] tracking-wide md:leading-[4vw] leading-[2rem]">Gain valuable exposure for your brand and help us ensure the success of our Conference by becoming a sponsor or exhibitor!</p>
                             </div>
                         </div>
-
+                        <div id="modal" class="fixed inset-0 text-black bg-black bg-opacity-50 hidden items-center justify-center p-4">
+                            <div class="bg-white rounded-lg w-full max-w-md relative">
+                                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                                    ✕
+                                </button>
+                        
+                                <div class="p-6">
+                                    <h2 class="text-2xl font-bold text-pink-600 mb-6 mt-3">PAYMENT MODE: BANK TRANSFER</h2>
+                                    
+                                    <div class="space-y-4">
+                                        <div class="border-b border-gray-200 pb-2">
+                                            <p class="text-gray-600">Bank</p>
+                                            <p class="font-semibold">Central Bank Of India</p>
+                                        </div>
+                                        <div class="border-b border-gray-200 pb-2">
+                                            <p class="text-gray-600">Branch</p>
+                                            <p class="font-semibold">HBTI Kanpur</p>
+                                        </div>
+                                        <div class="border-b border-gray-200 pb-2">
+                                            <p class="text-gray-600">A/C Name</p>
+                                            <p class="font-semibold">InDA-HBTU</p>
+                                        </div>
+                                        <div class="border-b border-gray-200 pb-2">
+                                            <p class="text-gray-600">A/C No.</p>
+                                            <p class="font-semibold">5307313942</p>
+                                        </div>
+                                        <div class="border-b border-gray-200 pb-2">
+                                            <p class="text-gray-600">IFSC</p>
+                                            <p class="font-semibold">CBIN0283288</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="bg-white text-black min-h-screen w-full pt-1 flex flex-col pb-20 gap-10 rounded-xl px-6">
                             <h1 class="text-[8.5vw] md:text-[3.8rem] font-[heading1] font-bold mb-12 mt-32 mb-12 text-[#DD197F] page-headingspon text-center">Sponsorship Levels</h1>
                             <h1 class="text-center font-normal text-[1.3rem] tracking-wider font-[heading1]">Choose a Package</h1>
@@ -127,7 +160,7 @@
                                         </li>
                                     </ul>
                                     <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
-                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                    <button onclick="openModal()" class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
                                         GET STARTED
                                     </button>
                                 </div>
@@ -159,7 +192,7 @@
                                         </li>
                                     </ul>
                                     <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
-                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                    <button onclick="openModal()" class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
                                         GET STARTED
                                     </button>
                                 </div>
@@ -201,7 +234,7 @@
                                         </li>
                                     </ul>
                                     <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
-                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                    <button onclick="openModal()" class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
                                         GET STARTED
                                     </button>
                                 </div>
@@ -235,7 +268,7 @@
                                         </li>
                                     </ul>
                                     <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
-                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                    <button onclick="openModal()" class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
                                         GET STARTED
                                     </button>
                                 </div>
@@ -265,7 +298,7 @@
                                         </li>
                                     </ul>
                                     <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
-                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                    <button onclick="openModal()" class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
                                         GET STARTED
                                     </button>
                                 </div>
@@ -285,7 +318,7 @@
                                         </li>
                                     </ul>
                                     <div class="text-sm text-white mt-4 text-center">Plus 18% GST Applicable</div>
-                                    <button class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
+                                    <button onclick="openModal()" class="mt-6 bg-white text-black py-2 px-4 rounded font-bold hover:bg-gray-100 transition-colors w-full">
                                         GET STARTED
                                     </button>
                                 </div>
@@ -359,10 +392,28 @@
 
     </div>
 
+    
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script>
+        const modal = document.getElementById('modal');
+        function openModal() {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
     <script type="module" src="script.js"></script>
 </body>
 </html>
