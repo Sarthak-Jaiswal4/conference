@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InDACON24</title>
+    <title>InDACON25</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -118,7 +118,7 @@
                                     <a class="font-normal font-[quotefont] tracking-tighter text-[1.3rem] hidden sm:block hover:underline underline-offset-8 duration-300 ease-in-out cursor-pointer" href="sponsership.html">Sponsors</a>
                                 </div>
                                 <div class="flex">
-                                    <a class="nav w-32 rounded-full md:block hidden px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
+                                    <a class="nav w-32 rounded-full md:block hidden font-[quotefont] tracking-tighter px-4 py-2 text-blue-900 bg-pink-500 font-medium hover:bg-white hover:text-black duration-300 text-center" href="https://docs.google.com/forms/d/e/1FAIpQLSfFG5m7gCARlQM16V8A805kMb0zn_Qf4aMo4Heo2eIv7FWE8w/viewform">Register</a>
                                     <button id="menuBtn" class="fixed block md:hidden top-4 right-4 p-2 z-[99999] rounded-lg">
                                         <svg width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                           <path d="M4 6h16M4 12h16M4 18h16"></path>
@@ -162,20 +162,26 @@
                 </div>
             </div>
     
-            <div class="page-4 w-full h-auto flex flex-col gap-8 noise px-8 md:px-16">
+            <div class="page-4 w-full h-auto flex flex-col gap-8 noise">
                 <div class="h-full w-full md:mb-16">
-                    <div class="speaker-heading relative">
-                        <h1 class="font-[heading1] text-[2rem] md:text-[4rem] font-bold tracking-wider pb-12 font-semibold underline decoration-2 underline-offset-[12px] speakheading">Speakers</h1>
+                    <div class="speaker-heading relative mb-87">
+                        <div class="relative overflow-hidden w-full h-[10rem] flex space-y-[20vw] md:space-y-[7vw]">
+                            <div id="marquee3" class="absolute flex items-center text-white text-[4rem] md:text-[4vw] font-normal whitespace-nowrap font-[speakerfont] tracking-tight">
+                              <span>/ Panelists / Speakers / Workshop Leaders </span>
+                              <!-- <span >18 Speaker across the World.</span> -->
+                            </div>
+                        </div>
+                        <!-- <h1 class="font-[heading1] text-[2rem] md:text-[4rem] font-bold tracking-wider pb-12 font-semibold underline decoration-2 underline-offset-[12px] speakheading">Panelists / Speakers / Workshop Leaders /</h1> -->
                     </div>
         
-                    <div class="w-full h-full flex flex-wrap flex-col md:flex-row justify-between pb-12 md:pb-16 collage">
+                    <div class="w-full h-full flex flex-wrap flex-col md:flex-row justify-between pb-12 md:pb-16 collage px-8 md:px-16">
                         <div class="rounded-2xl py-6 h-auto w-auto basis-1/4 photo">
                             <div class="w-full flex justify-center items-center pb-6">
                                 <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/dalai-profile.jpg" alt="">
                             </div>
                             <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                                <h1 class="font-medium mb-[8px] text-[4.5vw] md:text-[1.7vw]">Prof. Ajay K. Dalai</h1>
-                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Saskatchewan</h1>
+                                <h1 class="font-medium mb-[0.6vw] text-[4.5vw] md:text-[1.7vw]">Prof. Ajay K. Dalai</h1>
+                                <h1 class="md:text-[1.4vw] py-1 text-[4vw]">University of Saskatchewan</h1>
                                 <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
                             </div>
                         </div>
@@ -184,8 +190,8 @@
                                 <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/meda-profile-2022.jpg" alt="">
                             </div>
                             <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                                <h1 class="font-medium mb-[8px] text-[4.5vw] md:text-[1.7vw]">Prof. Venkatesh Meda</h1>
-                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Saskatchewan</h1>
+                                <h1 class="font-medium mb-[0.6vw] text-[4.5vw] md:text-[1.7vw]">Prof. Venkatesh Meda</h1>
+                                <h1 class="md:text-[1.4vw] py-1 text-[4vw]">University of Saskatchewan</h1>
                                 <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
                             </div>
                         </div>
@@ -194,8 +200,8 @@
                                 <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/mehrotra.jpg" alt="">
                             </div>
                             <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                                <h1 class="font-medium mb-[8px] text-[4.5vw] md:text-[1.7vw]">Prof. Anil Mehrotra</h1>
-                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Calgary</h1>
+                                <h1 class="font-medium mb-[0.6vw] text-[4.5vw] md:text-[1.7vw]">Prof. Anil Mehrotra</h1>
+                                <h1 class="md:text-[1.4vw] py-1 text-[4vw]">University of Calgary</h1>
                                 <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
                             </div>
                         </div>
@@ -204,8 +210,8 @@
                                 <img class="w-[150px] h-[200px] object-cover rounded-2xl" src="./prof img/P23144TA210090_p_6 square.jpg" alt="">
                             </div>
                             <div class="w-full flex justify-center flex-col items-center leading-6 text-xl">
-                                <h1 class="font-medium mb-[8px] text-[4.5vw] md:text-[1.7vw]">Prof. Amar Mohanty</h1>
-                                <h1 class="md:text-[1.4vw] text-[4vw]">University of Guelph</h1>
+                                <h1 class="font-medium mb-[0.6vw] text-[4.5vw] md:text-[1.7vw]">Prof. Amar Mohanty</h1>
+                                <h1 class="md:text-[1.4vw] py-1 text-[4vw]">University of Guelph</h1>
                                 <h1 class="md:text-[1.4vw] text-[4vw]">Canada</h1>
                             </div>
                         </div>
@@ -220,7 +226,7 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="w-full h-full text-2xl md:text-xl font-semibold tracking-wide flex justify-end px-8 ">
+                    <div class="w-full h-full text-2xl md:text-xl font-semibold tracking-wide flex justify-end px-36 py-10">
                         <a class="font-[heading2] underline md:hover:underline underline-offset-8 hover:text-[1.4rem] duration-300 cursor-pointer ease-in-out" href="speaker.html">All Speakers</a>
                     </div>
                 </div>
@@ -243,7 +249,7 @@
                           </tr>
                           <tr>
                             <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Abstract Submission End</td>
-                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">30/11/2024</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">10/01/2025</td>
                           </tr>
                           <tr>
                             <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Announcement of Acceptance of Abstract</td>
@@ -251,7 +257,7 @@
                           </tr>
                           <tr>
                             <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">Last Date of Online Registration</td>
-                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">5/1/2025</td>
+                            <td class="border border-[#FF84E0] px-4 py-2 text-[3.5vw] md:text-[1.3rem]">10/01/2025</td>
                           </tr>
                         </tbody>
                       </table>
@@ -264,7 +270,7 @@
                         Empowering Ideas, Shaping Futures: <span class="font-[heading2] text-[#FF80ED]"> The Conference Revolution</span>
                     </h1>
                 </div>
-                <div class="h-full w-full flex md:gap-2 flex-col md:flex-row gap-[4rem] pb-32">
+                <div class="h-full w-full flex md:gap-2 flex-col md:flex-row gap-[4rem] pb-20">
                     <div class="w-0 md:w-[55%] h-full">
                     </div>
                     <div class="them-list h-full flex flex-col justify-center gap-4 text-[1rem] md:text-[1.7rem] items-start text-left w-full md:w-[45%] theme-lines">
@@ -297,6 +303,9 @@
                             <div id="liness" class="theme-line h-[2px]"></div>
                             </div>
                     </div>
+                </div>
+                <div class="w-[50%] h-auto text-[3.2vw] pb-20 leading-[4.6rem] font-medium">
+                    <h1>Transforming chemistry into solutions: Empowering desalination and innovation for a sustainable tomorrow</h1>
                 </div>
             </div>
     
@@ -348,7 +357,7 @@
                       </table>
                     </div>
                     <p class="text-red-500 mt-6 text-center mb-7">* 5% Additional fees for SPOT registration</p>
-                    <h2 class="text-center md:text-[1.4rem]">Last date for registration is <span class="font-bold">5th January,</span> 2025</h2>
+                    <h2 class="text-center md:text-[1.4rem]">Last date for registration is <span class="font-bold">10th January,</span> 2025</h2>
                     <h2 class="text-center md:text-[1.4rem]">All the registered participants will get the certificate</h2>
                   </div>
                 
@@ -444,7 +453,7 @@
                 <div class="p-8 w-full flex flex-col md:text-[1.1rem] font-semibold leading-8 rounded-xl pb-[10vw] tracking-wide">
                     <h1>Bank : <span>Central Bank Of India</span></h1>
                     <h1>Branch : <span>HBTI Kanpur</span></h1>
-                    <h1>A/C Name : <span>inDA-HBTU</span></h1>
+                    <h1>A/C Name : <span>InDA-HBTU</span></h1>
                     <h1>A/C No. : <span>5307313942</span></h1>
                     <h1>IFSC : <span>CBIN0283288</span></h1>
                 </div>        
@@ -452,7 +461,7 @@
         </div>
 
         <footer class="h-auto w-full flex flex-col  md:px-16 pb-20 md:pb-10 footer-page">
-            <div class="w-full h-full flex md:flex-row flex-col-reverse md:pt-0 pt-10">
+            <div class="w-full h-full flex md:flex-row flex-col-reverse md:pt-10 pt-10">
                 <div class="container py-10 md:py-20 text-center flex flex-col items-center  md:pt-0 pt-20">
                     <h2 class="text-[8.2vw] md:text-4xl font-bold font-[heading1] tracking-wider footer pb-8 md:w-[50%] border-b-[1px]">InDACON 2025</h2>
                     <div class="w-full h-10 flex text-white text-center justify-center md:pb-0 pb-16">
